@@ -1,0 +1,21 @@
+.header__navbar {
+  color: #08A6E4;
+  max-height: 70px;
+  width: 100%;
+  padding: 20px;
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
+}
+.header__navbar__title {
+  font-family: Raleway;
+  font-weight: 300;
+  display: inline-block;
+  text-align: center;
+  font-size: 2rem;
+}
+.header__navbar__menu {
+  display: inline-block;
+  margin-left: 3em;
+  margin-bottom: 0.35em;
+}
+
+/*# sourceMappingURL=header.css.map */

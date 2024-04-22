@@ -1,0 +1,31 @@
+$blue: #08A6E4;
+.header {
+
+    &__navbar {
+        color: $blue;
+        max-height: 70px;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0px 3px 6px 0px #0000004A;
+
+        &__title {
+            font-family: Raleway;
+            font-weight: 300;
+            display: inline-block;
+            text-align: center;
+            font-size: 2rem;
+        }
+        
+        &__menu {
+            display: inline-block;
+            margin-left: 3em;
+            margin-bottom: 0.35em;
+        }
+    }
+
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+}
