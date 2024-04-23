@@ -1,8 +1,7 @@
 .header__navbar {
   color: #08A6E4;
-  max-height: 70px;
+  height: 70px;
   width: 100%;
-  padding: 20px;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
 }
 .header__navbar__title {
@@ -11,13 +10,132 @@
   display: inline-block;
   text-align: center;
   font-size: 2rem;
+  margin: 0.5em;
 }
-.header__navbar__menu {
+.header__navbar__menu--low_width {
   display: inline-block;
-  margin-left: 3em;
-  margin-bottom: 0.35em;
+  margin-left: 2em;
+  /*
+  &__img {
+
+  }
+  */
+}
+.header__navbar__menu--wider_width_why_us {
+  display: none;
+}
+.header__navbar__menu--wider_width_benefits {
+  display: none;
+}
+.header__navbar__menu--wider_width_prices {
+  display: none;
+}
+.header__navbar__menu--wider_width_contact {
+  display: none;
 }
 
+@media only screen and (min-width: 1000px) {
+  .header__navbar {
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: 100%;
+    align-items: center;
+  }
+  .header__navbar__title {
+    grid-column: 2/3;
+  }
+  .header__navbar__menu--low_width {
+    display: none;
+  }
+  .header__navbar__menu--wider_width_why_us {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 0.68rem;
+    color: #A5A5A5;
+    line-height: 1rem;
+    letter-spacing: 0.2rem;
+    justify-self: center;
+    height: 100%;
+    padding: 0 1em;
+    text-align: center;
+    grid-column: 10;
+  }
+  .header__navbar__menu--wider_width_why_us:hover {
+    color: #000000;
+    border-bottom: 4px solid #08A6E4;
+  }
+  .header__navbar__menu--wider_width_benefits {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 0.68rem;
+    color: #A5A5A5;
+    line-height: 1rem;
+    letter-spacing: 0.2rem;
+    justify-self: center;
+    height: 100%;
+    padding: 0 1em;
+    text-align: center;
+    grid-column: 12;
+  }
+  .header__navbar__menu--wider_width_benefits:hover {
+    color: #000000;
+    border-bottom: 4px solid #08A6E4;
+  }
+  .header__navbar__menu--wider_width_prices {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 0.68rem;
+    color: #A5A5A5;
+    line-height: 1rem;
+    letter-spacing: 0.2rem;
+    justify-self: center;
+    height: 100%;
+    padding: 0 1em;
+    text-align: center;
+    grid-column: 14;
+  }
+  .header__navbar__menu--wider_width_prices:hover {
+    color: #000000;
+    border-bottom: 4px solid #08A6E4;
+  }
+  .header__navbar__menu--wider_width_contact {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 0.68rem;
+    color: #A5A5A5;
+    line-height: 1rem;
+    letter-spacing: 0.2rem;
+    justify-self: center;
+    height: 100%;
+    padding: 0 1em;
+    text-align: center;
+    grid-column: 16;
+  }
+  .header__navbar__menu--wider_width_contact:hover {
+    color: #000000;
+    border-bottom: 4px solid #08A6E4;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;

@@ -1,11 +1,36 @@
+@mixin wide-menu {
+    display: flex;
+    align-items: center;
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Open Sans";
+    font-weight: 700;
+    font-size: 0.68rem;
+    color: #A5A5A5;
+    line-height: 1rem;
+    letter-spacing: 0.2rem;
+    justify-self: center;
+    height: 100%;
+    padding: 0 1em;
+    text-align: center;
+    &:hover {
+        color: #000000;
+        border-bottom: 4px solid $blue;
+    }
+}
+
+
 $blue: #08A6E4;
+
+
+
 .header {
 
     &__navbar {
         color: $blue;
-        max-height: 70px;
+        height: 70px;
         width: 100%;
-        padding: 20px;
         box-shadow: 0px 3px 6px 0px #0000004A;
 
         &__title {
@@ -14,12 +39,35 @@ $blue: #08A6E4;
             display: inline-block;
             text-align: center;
             font-size: 2rem;
+            margin: 0.5em;
         }
         
         &__menu {
-            display: inline-block;
-            margin-left: 3em;
-            margin-bottom: 0.35em;
+
+            &--low_width {
+                display: inline-block;
+                margin-left: 2em;
+
+                /*
+                &__img {
+
+                }
+                */
+            }
+            
+            &--wider_width_why_us {
+                display: none;
+            }
+            &--wider_width_benefits {
+                display: none;
+            }
+            &--wider_width_prices {
+                display: none;
+            }
+            &--wider_width_contact{
+                display: none;
+            }
+            
         }
     }
 
@@ -27,5 +75,41 @@ $blue: #08A6E4;
 
 
 @media only screen and (min-width: 1000px) {
+    .header {
+        &__navbar {
+            display: grid;
+            grid-template-columns: repeat(17, 1fr);
+            grid-template-rows: 100%;
+            align-items: center;
 
+            &__title {
+                grid-column: 2 / 3;
+            }
+
+            &__menu {
+
+                &--low_width {
+                    display: none;
+                }
+                
+                &--wider_width_why_us {
+                    @include wide-menu;
+                    grid-column: 10 ;
+                }
+                &--wider_width_benefits {
+                    @include wide-menu;
+                    grid-column: 12 ;
+                }
+                &--wider_width_prices {
+                    @include wide-menu;
+                    grid-column: 14 ;
+                }
+                &--wider_width_contact{
+                    @include wide-menu;
+                    grid-column: 16 ;
+                }
+
+            }
+        }
+    }
 }
