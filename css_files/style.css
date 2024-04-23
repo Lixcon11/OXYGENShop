@@ -136,6 +136,43 @@
     border-bottom: 4px solid #08A6E4;
   }
 }
+.main__advertising {
+  text-align: center;
+  margin-top: 120px;
+}
+.main__advertising__slogan {
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 2.1rem;
+}
+.main__advertising__paragraph {
+  display: inline-block;
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1rem;
+  width: 77%;
+  margin-top: 20px;
+}
+.main__advertising__button {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 1rem;
+  color: white;
+  background-color: #08A6E4;
+  border-radius: 40px;
+  border: none;
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  height: 67px;
+  max-width: 440px;
+  width: 80%;
+  margin-top: 30px;
+}
+
+@media only screen and (min-width: 1000px) {
+  .main__advertising__slogan {
+    font-size: 3rem;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
