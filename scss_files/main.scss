@@ -38,8 +38,15 @@ $blue: #08A6E4;
             
         }
     }
-
-    
+    &__image_container {
+        overflow: hidden;
+        &__background {
+            width: 188%;
+            transform: translateX(-24.5%);
+            height: auto;
+            margin-top: 28px;
+        }
+    }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -47,6 +54,13 @@ $blue: #08A6E4;
         &__advertising {
             &__slogan {
                 font-size: 3rem;
+            }
+        }
+        &__image_container {
+            &__background { 
+                width: 100%;
+                transform: translateX(0%);
+                margin-top: 0px;
             }
         }
     }

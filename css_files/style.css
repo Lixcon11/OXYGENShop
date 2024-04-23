@@ -167,10 +167,24 @@
   width: 80%;
   margin-top: 30px;
 }
+.main__image_container {
+  overflow: hidden;
+}
+.main__image_container__background {
+  width: 188%;
+  transform: translateX(-24.5%);
+  height: auto;
+  margin-top: 28px;
+}
 
 @media only screen and (min-width: 1000px) {
   .main__advertising__slogan {
     font-size: 3rem;
+  }
+  .main__image_container__background {
+    width: 100%;
+    transform: translateX(0%);
+    margin-top: 0px;
   }
 }
 * {
