@@ -1,25 +1,3 @@
-@mixin wide-menu {
-    display: flex;
-    align-items: center;
-    color: currentColor;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Open Sans";
-    font-weight: 700;
-    font-size: 0.68rem;
-    color: #A5A5A5;
-    line-height: 1rem;
-    letter-spacing: 0.2rem;
-    justify-self: center;
-    height: 100%;
-    padding: 0 1em;
-    text-align: center;
-    &:hover {
-        color: #000000;
-        border-bottom: 4px solid $blue;
-    }
-}
-
 $blue: #08A6E4;
 
 .header {
@@ -45,7 +23,7 @@ $blue: #08A6E4;
         
         &__menu {
 
-            &--low_width {
+            &__low_width {
                 display: inline-block;
                 margin-left: 5%;
                 position: relative;
@@ -58,22 +36,11 @@ $blue: #08A6E4;
                 */
             }
             
-            &--wider_width_why_us {
+            &__tab {
                 display: none;
             }
-            &--wider_width_benefits {
-                display: none;
-            }
-            &--wider_width_prices {
-                display: none;
-            }
-            &--wider_width_contact{
-                display: none;
-            }
-            
         }
     }
-
 }
 
 
@@ -96,25 +63,43 @@ $blue: #08A6E4;
 
             &__menu {
 
-                &--low_width {
+                &__low_width {
                     display: none;
                 }
                 
-                &--wider_width_why_us {
-                    @include wide-menu;
-                    grid-column: 10 ;
-                }
-                &--wider_width_benefits {
-                    @include wide-menu;
-                    grid-column: 12 ;
-                }
-                &--wider_width_prices {
-                    @include wide-menu;
-                    grid-column: 14 ;
-                }
-                &--wider_width_contact{
-                    @include wide-menu;
-                    grid-column: 16 ;
+                &__tab {
+                    display: flex;
+                    align-items: center;
+                    color: currentColor;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    font-family: "Open Sans";
+                    font-weight: 700;
+                    font-size: 0.68rem;
+                    color: #A5A5A5;
+                    line-height: 1rem;
+                    letter-spacing: 0.2rem;
+                    justify-self: center;
+                    height: 100%;
+                    padding: 0 1em;
+                    text-align: center;
+                    &:hover {
+                        color: #000000;
+                        border-bottom: 4px solid $blue;
+                    }
+
+                    &--one {
+                        grid-column: 10 ;
+                    }
+                    &--two {
+                        grid-column: 12 ;
+                    }
+                    &--three {
+                        grid-column: 14 ;
+                    }
+                    &--four {
+                        grid-column: 16 ;
+                    }
                 }
             }
         }

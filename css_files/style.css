@@ -15,7 +15,7 @@
 .header__navbar__title__with_space {
   display: none;
 }
-.header__navbar__menu--low_width {
+.header__navbar__menu__low_width {
   display: inline-block;
   margin-left: 5%;
   position: relative;
@@ -26,16 +26,7 @@
   }
   */
 }
-.header__navbar__menu--wider_width_why_us {
-  display: none;
-}
-.header__navbar__menu--wider_width_benefits {
-  display: none;
-}
-.header__navbar__menu--wider_width_prices {
-  display: none;
-}
-.header__navbar__menu--wider_width_contact {
+.header__navbar__menu__tab {
   display: none;
 }
 
@@ -53,10 +44,10 @@
   .header__navbar__title__with_space {
     display: inline-block;
   }
-  .header__navbar__menu--low_width {
+  .header__navbar__menu__low_width {
     display: none;
   }
-  .header__navbar__menu--wider_width_why_us {
+  .header__navbar__menu__tab {
     display: flex;
     align-items: center;
     color: currentColor;
@@ -72,77 +63,22 @@
     height: 100%;
     padding: 0 1em;
     text-align: center;
+  }
+  .header__navbar__menu__tab:hover {
+    color: #000000;
+    border-bottom: 4px solid #08A6E4;
+  }
+  .header__navbar__menu__tab--one {
     grid-column: 10;
   }
-  .header__navbar__menu--wider_width_why_us:hover {
-    color: #000000;
-    border-bottom: 4px solid #08A6E4;
-  }
-  .header__navbar__menu--wider_width_benefits {
-    display: flex;
-    align-items: center;
-    color: currentColor;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Open Sans";
-    font-weight: 700;
-    font-size: 0.68rem;
-    color: #A5A5A5;
-    line-height: 1rem;
-    letter-spacing: 0.2rem;
-    justify-self: center;
-    height: 100%;
-    padding: 0 1em;
-    text-align: center;
+  .header__navbar__menu__tab--two {
     grid-column: 12;
   }
-  .header__navbar__menu--wider_width_benefits:hover {
-    color: #000000;
-    border-bottom: 4px solid #08A6E4;
-  }
-  .header__navbar__menu--wider_width_prices {
-    display: flex;
-    align-items: center;
-    color: currentColor;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Open Sans";
-    font-weight: 700;
-    font-size: 0.68rem;
-    color: #A5A5A5;
-    line-height: 1rem;
-    letter-spacing: 0.2rem;
-    justify-self: center;
-    height: 100%;
-    padding: 0 1em;
-    text-align: center;
+  .header__navbar__menu__tab--three {
     grid-column: 14;
   }
-  .header__navbar__menu--wider_width_prices:hover {
-    color: #000000;
-    border-bottom: 4px solid #08A6E4;
-  }
-  .header__navbar__menu--wider_width_contact {
-    display: flex;
-    align-items: center;
-    color: currentColor;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: "Open Sans";
-    font-weight: 700;
-    font-size: 0.68rem;
-    color: #A5A5A5;
-    line-height: 1rem;
-    letter-spacing: 0.2rem;
-    justify-self: center;
-    height: 100%;
-    padding: 0 1em;
-    text-align: center;
+  .header__navbar__menu__tab--four {
     grid-column: 16;
-  }
-  .header__navbar__menu--wider_width_contact:hover {
-    color: #000000;
-    border-bottom: 4px solid #08A6E4;
   }
 }
 .main__advertising {
@@ -155,11 +91,11 @@
   font-size: 2.1rem;
 }
 .main__advertising__paragraph {
-  display: inline-block;
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 1rem;
-  width: 77%;
+  width: 72%;
+  margin: auto;
   margin-top: 20px;
 }
 .main__advertising__button {
@@ -185,7 +121,17 @@
   height: auto;
   margin-top: 28px;
 }
-
+.main__stats {
+  text-align: center;
+}
+.main__stats__slogan {
+  display: inline-block;
+  font-family: Raleway;
+  font-weight: 300;
+  font-size: 1.9rem;
+  line-height: 35px;
+  width: 74%;
+}
 @media only screen and (min-width: 1000px) {
   .main__advertising__slogan {
     font-size: 3rem;
@@ -194,6 +140,14 @@
     width: 100%;
     transform: translateX(0%);
     margin-top: 0px;
+  }
+  .main__stats__slogan {
+    display: inline-block;
+    font-family: Raleway;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 42px;
+    width: 74%;
   }
 }
 * {

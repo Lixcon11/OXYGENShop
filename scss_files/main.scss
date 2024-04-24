@@ -13,11 +13,11 @@ $blue: #08A6E4;
         }
 
         &__paragraph {
-            display: inline-block;
             font-family: "Open Sans";
             font-weight: 400;
             font-size: 1rem;
-            width: 77%;
+            width: 72%;
+            margin: auto;
             margin-top: 20px;
             
         }
@@ -47,10 +47,51 @@ $blue: #08A6E4;
             margin-top: 28px;
         }
     }
+    &__stats {
+        text-align: center;
+        &__slogan {
+            display: inline-block;
+            font-family: Raleway;
+            font-weight: 300;
+            font-size: 1.9rem;
+            line-height: 35px;
+            width: 74%;
+        }
+
+        &____container {
+
+            &__stat {
+
+                &__number {
+
+                }
+
+                &__fact {
+
+                }
+
+                &__image{
+
+                    &--red {
+
+                    }
+
+                    &--blue {
+
+                    }
+
+                    &--green {
+
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1000px) {
     .main {
+
         &__advertising {
             &__slogan {
                 font-size: 3rem;
@@ -61,6 +102,16 @@ $blue: #08A6E4;
                 width: 100%;
                 transform: translateX(0%);
                 margin-top: 0px;
+            }
+        }
+        &__stats {
+            &__slogan {
+                display: inline-block;
+                font-family: Raleway;
+                font-weight: 400;
+                font-size: 2.5rem;
+                line-height: 42px;
+                width: 74%;
             }
         }
     }
