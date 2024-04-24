@@ -15,20 +15,17 @@ $blue: #08A6E4;
             text-align: center;
             font-size: 2rem;
             margin: 0.5em;
-
+            width: 17%;
             &__with_space {
                 display: none;
             }
         }
         
         &__menu {
-
+            display: inline-block;
+            text-align: right;
+            width: 60%;
             &__low_width {
-                display: inline-block;
-                margin-left: 5%;
-                position: relative;
-                bottom: 5px;
-
                 /*
                 &__img {
 
@@ -52,6 +49,7 @@ $blue: #08A6E4;
         
             &__title {
                 grid-column: 1 / 6;
+                width: auto;
 
                 &__without_space {
                     display: none;
@@ -62,6 +60,7 @@ $blue: #08A6E4;
             } 
 
             &__menu {
+                width: auto;
 
                 &__low_width {
                     display: none;

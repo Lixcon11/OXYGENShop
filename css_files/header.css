@@ -11,15 +11,17 @@
   text-align: center;
   font-size: 2rem;
   margin: 0.5em;
+  width: 17%;
 }
 .header__navbar__title__with_space {
   display: none;
 }
-.header__navbar__menu__low_width {
+.header__navbar__menu {
   display: inline-block;
-  margin-left: 5%;
-  position: relative;
-  bottom: 5px;
+  text-align: right;
+  width: 60%;
+}
+.header__navbar__menu__low_width {
   /*
   &__img {
 
@@ -37,12 +39,16 @@
   }
   .header__navbar__title {
     grid-column: 1/6;
+    width: auto;
   }
   .header__navbar__title__without_space {
     display: none;
   }
   .header__navbar__title__with_space {
     display: inline-block;
+  }
+  .header__navbar__menu {
+    width: auto;
   }
   .header__navbar__menu__low_width {
     display: none;
