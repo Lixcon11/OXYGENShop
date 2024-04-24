@@ -16,7 +16,8 @@ $blue: #08A6E4;
             font-size: 2rem;
             margin: 0.5em;
             width: 17%;
-            &__with_space {
+
+            &__with-space {
                 display: none;
             }
         }
@@ -25,17 +26,10 @@ $blue: #08A6E4;
             display: inline-block;
             text-align: right;
             width: 60%;
-            &__low_width {
-                /*
-                &__img {
+        }
 
-                }
-                */
-            }
-            
-            &__tab {
-                display: none;
-            }
+        &__tab {
+            display: none;
         }
     }
 }
@@ -43,6 +37,7 @@ $blue: #08A6E4;
 
 @media only screen and (min-width: 1000px) {
     .header {
+
         &__navbar { 
             display: grid;
             grid-template-columns: repeat(17, 1fr);
@@ -51,54 +46,55 @@ $blue: #08A6E4;
                 grid-column: 1 / 6;
                 width: auto;
 
-                &__without_space {
+                &__without-space {
                     display: none;
                 }
-                &__with_space {
+
+                &__with-space {
                     display: inline-block;
                 }
             } 
 
             &__menu {
-                width: auto;
+                display: none;
+            }
 
-                &__low_width {
-                    display: none;
+            &__tab {
+                display: flex;
+                align-items: center;
+                color: currentColor;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: "Open Sans";
+                font-weight: 700;
+                font-size: 0.68rem;
+                color: #A5A5A5;
+                line-height: 1rem;
+                letter-spacing: 0.2rem;
+                justify-self: center;
+                height: 100%;
+                padding: 0 1em;
+                text-align: center;
+
+                &:hover {
+                    color: #000000;
+                    border-bottom: 4px solid $blue;
+                }
+
+                &--one {
+                    grid-column: 10 ;
+                }
+
+                &--two {
+                    grid-column: 12 ;
+                }
+
+                &--three {
+                    grid-column: 14 ;
                 }
                 
-                &__tab {
-                    display: flex;
-                    align-items: center;
-                    color: currentColor;
-                    text-decoration: none;
-                    text-transform: uppercase;
-                    font-family: "Open Sans";
-                    font-weight: 700;
-                    font-size: 0.68rem;
-                    color: #A5A5A5;
-                    line-height: 1rem;
-                    letter-spacing: 0.2rem;
-                    justify-self: center;
-                    height: 100%;
-                    padding: 0 1em;
-                    text-align: center;
-                    &:hover {
-                        color: #000000;
-                        border-bottom: 4px solid $blue;
-                    }
-
-                    &--one {
-                        grid-column: 10 ;
-                    }
-                    &--two {
-                        grid-column: 12 ;
-                    }
-                    &--three {
-                        grid-column: 14 ;
-                    }
-                    &--four {
-                        grid-column: 16 ;
-                    }
+                &--four {
+                    grid-column: 16 ;
                 }
             }
         }

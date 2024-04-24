@@ -19,7 +19,6 @@ $blue: #08A6E4;
             width: 72%;
             margin: auto;
             margin-top: 20px;
-            
         }
 
         &__button {
@@ -35,11 +34,12 @@ $blue: #08A6E4;
             max-width: 440px;
             width: 80%;
             margin-top: 30px;
-            
         }
     }
+
     &__image_container {
         overflow: hidden;
+
         &__background {
             width: 188%;
             transform: translateX(-24.5%);
@@ -47,8 +47,10 @@ $blue: #08A6E4;
             margin-top: 28px;
         }
     }
+
     &__stats {
         text-align: center;
+
         &__slogan {
             display: inline-block;
             font-family: Raleway;
@@ -62,31 +64,14 @@ $blue: #08A6E4;
 
             &__stat {
 
-                &__number {
-                    font-family: Raleway;
-                    font-weight: 800;
-                    font-size: 1.25rem;
-                    letter-spacing:5.96px;
-                    margin-top: 12px;
-                }
-
-                &__fact {
-                    font-family: Raleway;
-                    font-weight: 400;
-                    font-size: 1rem;
-                    line-height: 20px;
-                    color: #A5A5A5;
-                    width: 40%;
-                    margin: auto;
-                    margin-top: 17px;
-                }
-                &__backgorund {
+                &__background {
                     height: 62.7px;
                     width: 62.7px;
                     border-radius: 50%;
                     margin: auto;
                     position: relative;
                     margin-top: 30px;
+
                     &--red {
                         background-color: #FB3B64;
                     }
@@ -110,7 +95,73 @@ $blue: #08A6E4;
                         }
                     }
                 }
+
+                &__number {
+                    font-family: Raleway;
+                    font-weight: 800;
+                    font-size: 1.25rem;
+                    letter-spacing:5.96px;
+                    margin-top: 12px;
+                }
+
+                &__fact {
+                    font-family: Raleway;
+                    font-weight: 400;
+                    font-size: 1rem;
+                    line-height: 20px;
+                    color: #A5A5A5;
+                    width: 40%;
+                    margin: auto;
+                    margin-top: 17px;
+                    margin-bottom: 45px;
+                }
             }
+        }
+    }
+
+    &__showcase {
+        background-color: #F7F7F7;
+        padding: 35px 23px;
+
+        &__all {
+
+            &__container {
+                background-color: white;
+                margin: 0px auto 20px;
+    
+                &__slogan {
+    
+                }
+    
+                &__text {
+    
+                    &--bigger {
+    
+                    }
+                }
+    
+                &__background-one {
+    
+                    &__image {
+    
+                    }
+                }
+    
+                &__background-two {
+    
+                    &__image {
+                        
+                    }
+                }
+            }
+    
+            &__background-three {
+                transform: translate(0px, -20px);
+
+                &__image {
+    
+                }
+            }      
         }
     }
 }
@@ -119,18 +170,23 @@ $blue: #08A6E4;
     .main {
 
         &__advertising {
+
             &__slogan {
                 font-size: 3rem;
             }
         }
+
         &__image_container {
+
             &__background { 
                 width: 100%;
                 transform: translateX(0%);
                 margin-top: 0px;
             }
         }
+
         &__stats {
+
             &__slogan {
                 display: inline-block;
                 font-family: Raleway;
@@ -139,10 +195,18 @@ $blue: #08A6E4;
                 line-height: 42px;
                 width: 74%;
             }
+            
             &__container {
                 margin-top: 85px;
                 display: flex;
                 justify-content: space-evenly;
+
+                &__stat {
+
+                    &__fact {
+                        width: 75%;
+                    }
+                }
             }
         }
     }
