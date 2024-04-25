@@ -185,6 +185,82 @@ $blue: #08A6E4;
         }      
         
     }
+
+    &__pricing {
+
+        &__options-container {
+
+            &__option {
+
+                &--red {
+
+                }
+
+                &--blue {
+
+                }
+
+                &--green {
+
+                }
+
+                &__header {
+
+                    &__tier {
+
+                    }
+
+                    &__price {
+
+                        &--red {
+
+                        }
+        
+                        &--blue {
+        
+                        }
+        
+                        &--green {
+        
+                        }
+                    }
+
+                    &__limited {
+
+                    }
+                }
+
+                &__body {
+
+                    &__feature {
+
+                        &__check {
+
+                        }
+
+                        &__paragraph {
+
+                        }
+                    }
+
+                    &__button {
+
+                        &--red {
+
+                        }
+        
+                        &--blue {
+        
+                        }
+        
+                        &--green {
+        
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (min-width: 1000px) {

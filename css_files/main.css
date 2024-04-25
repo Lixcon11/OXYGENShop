@@ -145,7 +145,6 @@
 .main__showcase__background-three__image {
   transform: translate(0px, 30px);
 }
-
 @media only screen and (min-width: 1000px) {
   .main__advertising__slogan {
     font-size: 3rem;
