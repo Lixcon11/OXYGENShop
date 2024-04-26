@@ -1,24 +1,63 @@
 .footer {
     
-    &__end-note {
+    height: 5.5em;
+    box-shadow: 0px -5px 40px 0px #00000033;
+    background-color: #F7F7F7;
+    
+    &__container {
 
-        &__name {
+        &__end-note {
 
+            display: inline-block;
+            text-align: left;
+            margin-left: 10px;
+            margin-top: 20px;
+            &__name {
+                font-family: Raleway;
+                font-size: 1.625rem;
+                font-weight: 300;
+                line-height: 1.875rem;
+                color: #08A6E4;
+            }
+    
+            &__copyright {
+                font-family: "Open Sans";
+                font-size: 0.7rem;
+                font-weight: 400;
+                line-height: 1rem;
+                color:#A5A5A5
+            }
         }
-
-        &__copyright {
-
+        
+        &__social {
+            display: inline-block;
+            text-align: right;
+            width: 50%;
+    
+            &__twitter {
+                display: inline-block;
+            }
+    
+            &__facebook {
+                display: inline-block;
+            }
         }
     }
+}
 
-    &__social {
+@media only screen and (min-width: 1000px) { 
 
-        &__twitter {
+    .footer {
+
+        &__container {
+            display: flex;
+            justify-content: space-between;
+
+            &__social {
+                transform: translate(-20px, 30px);
+            }
 
         }
 
-        &__facebook {
-            
-        }
     }
 }

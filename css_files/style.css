@@ -322,7 +322,7 @@
   background-color: #55DFB4;
 }
 .main__questions {
-  margin: 60px 8% 0;
+  margin: 60px 8%;
 }
 .main__questions__info__last-words__slogan {
   font-family: Raleway;
@@ -668,6 +668,52 @@
   .main__questions__invoice {
     width: 35%;
     margin: 0;
+  }
+}
+.footer {
+  height: 5.5em;
+  box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
+  background-color: #F7F7F7;
+}
+.footer__container__end-note {
+  display: inline-block;
+  text-align: left;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.footer__container__end-note__name {
+  font-family: Raleway;
+  font-size: 1.625rem;
+  font-weight: 300;
+  line-height: 1.875rem;
+  color: #08A6E4;
+}
+.footer__container__end-note__copyright {
+  font-family: "Open Sans";
+  font-size: 0.7rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #A5A5A5;
+}
+.footer__container__social {
+  display: inline-block;
+  text-align: right;
+  width: 50%;
+}
+.footer__container__social__twitter {
+  display: inline-block;
+}
+.footer__container__social__facebook {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 1000px) {
+  .footer__container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer__container__social {
+    transform: translate(-20px, 30px);
   }
 }
 * {
