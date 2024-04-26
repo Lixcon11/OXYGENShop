@@ -155,7 +155,7 @@ $blue: #08A6E4;
                 margin: 10px auto 45px;
                 height: 5.6em;
                 width: 5.6em;
-                border-radius: 45%;
+                border-radius: 41px;
                 transform: rotate(-0.125turn) translate(40%, 40%);
                 
                 &__image {
@@ -187,59 +187,98 @@ $blue: #08A6E4;
     }
 
     &__pricing {
+        text-align: center;
+        margin-top: 40px;
+        $red: #FB3B64;
+        $blue: #07ACE6;
+        $green: #55DFB4;
+
+        &__title {
+            font-family: Raleway;
+            font-weight: 400;
+            font-size: 2.25rem;
+            line-height: 2.6rem;
+        }
 
         &__options-container {
+            margin: 15px 10%;
 
             &__option {
+                border: 1px solid;
+                border-radius: 18px;
+                margin-bottom: 40px;
 
                 &--red {
-
+                    border-color: $red;
                 }
 
                 &--blue {
-
+                    border-color: $blue;
                 }
 
                 &--green {
-
+                    border-color: $green;
                 }
 
                 &__header {
+                    display: inline-block;
+                    width: 49%;
+                    transform: translateY(-25%);
 
                     &__tier {
-
+                        font-family: Raleway;
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        line-height: 1.5rem;
+                        
                     }
 
                     &__price {
 
-                        &--red {
+                        font-family: "Open Sans";
+                        font-size: 2.875rem;
+                        font-weight: 300;
+                        line-height: 4rem;
 
+                        &--red {
+                            color: $red;
                         }
         
                         &--blue {
-        
+                            color: $blue;
                         }
         
                         &--green {
-        
+                            color: $green;
                         }
                     }
 
                     &__limited {
-
+                        font-family: Raleway;
+                        font-size: 0.75rem;
+                        font-weight: 700;
+                        line-height: 0.9rem;
                     }
                 }
 
                 &__body {
+                    display: inline-block;
+                    width: 40%;
+                    text-align: left;
 
                     &__feature {
-
+                        /*
                         &__check {
-
-                        }
+                            display: inline-block;
+                            width: 8%;
+                        }*/
 
                         &__paragraph {
+                            margin: 10px 8px;
 
+                            &__image {
+                                margin-right: 10px;
+                            }
                         }
                     }
 
@@ -262,6 +301,78 @@ $blue: #08A6E4;
         }
     }
 }
+/*TODO
+-Delete HTML "feature" word
+-remake word structure
+-Put header and body parts togheter to use the begin button
+
+*/
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #ffffff;
+    border: 1px solid #95989A;
+    border-radius: 4px;
+  }
+
+  /* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ffffff;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #ffffff;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 10px;
+    top: 2px;
+    width: 10px;
+    height: 20px;
+    border: solid #08A6E4;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
 
 @media only screen and (min-width: 1000px) {
     .main {
@@ -372,7 +483,7 @@ $blue: #08A6E4;
                 &__background-one {
                     width: 11.25em;
                     height: 11.25em;
-                    border-radius: 25%;
+                    border-radius: 41px;
 
                     &__image {
                         width: auto;
