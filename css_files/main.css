@@ -24,7 +24,7 @@
   border-radius: 40px;
   border: none;
   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
-  height: 67px;
+  height: 4.2em;
   max-width: 440px;
   width: 80%;
   margin-top: 30px;
@@ -108,12 +108,13 @@
   font-size: 1.9rem;
   line-height: 2.5rem;
   margin: 10px 0px 15px;
+  width: 49;
 }
 .main__showcase__container__text__paragraph {
   font-family: "Open Sans";
   font-weight: 400;
   font-size: 0.9rem;
-  line-height: 1.2rem;
+  line-height: 1.4rem;
 }
 .main__showcase__container__text__paragraph--bigger {
   font-size: 1rem;
@@ -174,9 +175,7 @@
 }
 .main__pricing__options-container__option__features__header {
   display: inline-block;
-  width: 55%;
-  margin: auto 0px;
-  height: 100%;
+  width: 49%;
 }
 .main__pricing__options-container__option__features__header__tier {
   font-family: Raleway;
@@ -207,21 +206,43 @@
 }
 .main__pricing__options-container__option__features__body {
   display: inline-block;
-  width: 40%;
+  width: 49%;
   text-align: left;
 }
-.main__pricing__options-container__option__features__body__paragraph {
-  margin: 10px 8px;
+.main__pricing__options-container__option__features__body__list {
+  list-style-type: none;
 }
-.main__pricing__options-container__option__features__body__paragraph__image {
-  margin-right: 10px;
+.main__pricing__options-container__option__features__body__list__element {
+  margin: 15px 5px 15px 0px;
+  font-family: "Open Sans";
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.2rem;
 }
-/*TODO
--Delete HTML "feature" word
--remake word structure
--Put header and body parts togheter to use the begin button
+.main__pricing__options-container__option__features__body__list__element__image {
+  padding-right: 8px;
+}
+.main__pricing__options-container__option__button {
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 0.8rem;
+  height: 3.125em;
+  width: 40%;
+  border-radius: 23px;
+  border: 0px;
+  color: white;
+  transform: translateY(50%);
+}
+.main__pricing__options-container__option__button--red {
+  background-color: #FB3B64;
+}
+.main__pricing__options-container__option__button--blue {
+  background-color: #07ACE6;
+}
+.main__pricing__options-container__option__button--green {
+  background-color: #55DFB4;
+}
 
-*/
 /*
 .container {
     display: block;
@@ -392,6 +413,28 @@
   }
   .main__showcase__background-three__image {
     transform: translate(0px, 50%);
+  }
+  .main__pricing__options-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: px;
+  }
+  .main__pricing__options-container__option {
+    padding: 0px 8%;
+  }
+  .main__pricing__options-container__option__features__header {
+    display: block;
+    width: auto;
+    padding-bottom: 45px;
+    padding-top: 30px;
+  }
+  .main__pricing__options-container__option__features__body {
+    display: block;
+    width: auto;
+    text-align: center;
+  }
+  .main__pricing__options-container__option__button {
+    width: 100%;
   }
 }
 
