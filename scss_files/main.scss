@@ -290,8 +290,8 @@ $blue: #08A6E4;
                     font-family: "Open Sans";
                     font-weight: 700;
                     font-size: 0.8rem;
-                    height: 3.125em;
-                    width: 40%;
+                    height: 3.5em;
+                    width: 45%;
                     border-radius: 23px;
                     border: 0px;
                     color: white;
@@ -312,6 +312,165 @@ $blue: #08A6E4;
             }
         }
     }
+
+    &__questions {
+        margin: 60px 8% 0;
+
+        &__info {
+
+            &__last-words {
+
+                &__slogan {
+                    font-family: Raleway;
+                    font-size: 2.5rem;
+                    font-weight: 400;
+                    line-height: 2.93rem;
+                }
+
+                &__paragraph {
+                    font-family: "Open Sans";
+                    font-size: 1rem;
+                    font-weight: 400;
+                    line-height: 1.37rem;
+                }
+            }
+
+            &__contacts {
+                margin-top: 35px;
+
+                &__contact {
+
+                    font-family: "Open Sans";
+                    font-size: 1rem;
+                    font-weight: 600;
+                    line-height: 1.37rem;
+                    color: #A5A5A5;
+
+                    
+                    &__image {
+                        margin-right: 9px;
+                        transform: translateY(5px);
+                    }
+                }
+            }
+        }
+
+        &__invoice {
+            margin-top: 45px;
+            &__label {
+                display: block;
+                font-family: "Open Sans";
+                font-size: 0.7rem;
+                font-weight: 600;
+                line-height: 0.9375rem;
+                letter-spacing: 0.2rem;
+                color: $blue;
+                text-transform: uppercase;
+                margin-top: 25px;
+            }
+
+            &__input {
+                margin-top: 10px;
+                margin-bottom: 25px;
+                width: 100%;
+                display: block;
+                border: 0;
+                border-bottom: 1px solid $blue;
+            }
+
+            &__check-container {
+                display: block;
+                transform: translate(0px, 2px);
+                position: relative;
+                padding-left: 35px;
+                margin-bottom: 12px;
+                cursor: pointer;
+                font-size: 14px;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                & input {
+                    position: absolute;
+                    opacity: 0;
+                    cursor: pointer;
+                    height: 0;
+                    width: 0;
+                }
+
+                &:hover input ~ .main__questions__invoice__check-container__checkmark {
+                    background-color: #ffffff;
+                }
+
+                & input:checked ~ .main__questions__invoice__check-container__checkmark {
+                    background-color: #ffffff;
+                }
+
+                & input:checked ~ .main__questions__invoice__check-container__checkmark:after {
+                    display: block;
+                }
+
+                &__checkmark {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 1.5em;
+                    width: 1.5em;
+                    background-color: #ffffff;
+                    border: 1px solid #95989A;
+                    border-radius: 4px;
+
+                    &:after {
+                        content: "";
+                        position: absolute;
+                        display: none;
+                    }
+                }
+            }
+
+            &__consent-text {
+                width: 90%;
+                margin-left: 25px;
+                font-family: "Open Sans";
+                font-size: 0.75rem;
+                font-weight: 400;
+                line-height: 1rem;
+                color: #707070;
+            }
+
+            &__button-container {
+                text-align: right;
+                margin-top: 30PX;
+                margin-bottom: 50px;
+                &__button {
+                    font-family: "Open Sans";
+                    font-size: 0.8rem;
+                    font-weight: 700;
+                    line-height: 1.1rem;
+                    width: 17em;
+                    height: 4.5em;
+                    border: 0px;
+                    border-radius: 35px;
+                    background-color: $blue;
+                    color: white;
+                    box-shadow: 5px 10px 14px 0px #07ACE64A;
+                }
+            }
+        }
+    }
+}
+
+.main__questions__invoice__check-container .main__questions__invoice__check-container__checkmark:after {
+    left: 7px;
+    top: 2px;
+    width: 4px;
+    height: 10px;
+    border: solid #08A6E4;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
 }
 /*
 .container {
@@ -380,7 +539,6 @@ $blue: #08A6E4;
     transform: rotate(45deg);
   }
   */
-
 @media only screen and (min-width: 1000px) {
     .main {
 
@@ -554,6 +712,34 @@ $blue: #08A6E4;
                     }
                 }
 
+            }
+        }
+
+        &__questions { 
+            display: flex;
+            justify-content: space-evenly;
+            align-content: center;
+            &__info {
+                width: 35%;
+                &__last-words {
+                    &__slogan {
+                        font-size: 3em;
+                        margin-bottom: 15px;
+                    }
+                }
+                
+                &__contacts {
+
+                    &__contact {
+                        margin-left: 8px;
+                        display: inline-block;
+                    }
+                }
+            }
+
+            &__invoice {
+                width: 35%;
+                margin: 0;
             }
         }
     }

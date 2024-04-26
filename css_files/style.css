@@ -305,8 +305,8 @@
   font-family: "Open Sans";
   font-weight: 700;
   font-size: 0.8rem;
-  height: 3.125em;
-  width: 40%;
+  height: 3.5em;
+  width: 45%;
   border-radius: 23px;
   border: 0px;
   color: white;
@@ -320,6 +320,140 @@
 }
 .main__pricing__options-container__option__button--green {
   background-color: #55DFB4;
+}
+.main__questions {
+  margin: 60px 8% 0;
+}
+.main__questions__info__last-words__slogan {
+  font-family: Raleway;
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2.93rem;
+}
+.main__questions__info__last-words__paragraph {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.37rem;
+}
+.main__questions__info__contacts {
+  margin-top: 35px;
+}
+.main__questions__info__contacts__contact {
+  font-family: "Open Sans";
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.37rem;
+  color: #A5A5A5;
+}
+.main__questions__info__contacts__contact__image {
+  margin-right: 9px;
+  transform: translateY(5px);
+}
+.main__questions__invoice {
+  margin-top: 45px;
+}
+.main__questions__invoice__label {
+  display: block;
+  font-family: "Open Sans";
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 0.9375rem;
+  letter-spacing: 0.2rem;
+  color: #08A6E4;
+  text-transform: uppercase;
+  margin-top: 25px;
+}
+.main__questions__invoice__input {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  width: 100%;
+  display: block;
+  border: 0;
+  border-bottom: 1px solid #08A6E4;
+}
+.main__questions__invoice__check-container {
+  display: block;
+  transform: translate(0px, 2px);
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.main__questions__invoice__check-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.main__questions__invoice__check-container:hover input ~ .main__questions__invoice__check-container__checkmark {
+  background-color: #ffffff;
+}
+.main__questions__invoice__check-container input:checked ~ .main__questions__invoice__check-container__checkmark {
+  background-color: #ffffff;
+}
+.main__questions__invoice__check-container input:checked ~ .main__questions__invoice__check-container__checkmark:after {
+  display: block;
+}
+.main__questions__invoice__check-container__checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: #ffffff;
+  border: 1px solid #95989A;
+  border-radius: 4px;
+}
+.main__questions__invoice__check-container__checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.main__questions__invoice__consent-text {
+  width: 90%;
+  margin-left: 25px;
+  font-family: "Open Sans";
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  color: #707070;
+}
+.main__questions__invoice__button-container {
+  text-align: right;
+  margin-top: 30PX;
+  margin-bottom: 50px;
+}
+.main__questions__invoice__button-container__button {
+  font-family: "Open Sans";
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  width: 17em;
+  height: 4.5em;
+  border: 0px;
+  border-radius: 35px;
+  background-color: #08A6E4;
+  color: white;
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+}
+
+.main__questions__invoice__check-container .main__questions__invoice__check-container__checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 4px;
+  height: 10px;
+  border: solid #08A6E4;
+  border-width: 0 1px 1px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 /*
@@ -514,6 +648,26 @@
   }
   .main__pricing__options-container__option__button {
     width: 100%;
+  }
+  .main__questions {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  .main__questions__info {
+    width: 35%;
+  }
+  .main__questions__info__last-words__slogan {
+    font-size: 3em;
+    margin-bottom: 15px;
+  }
+  .main__questions__info__contacts__contact {
+    margin-left: 8px;
+    display: inline-block;
+  }
+  .main__questions__invoice {
+    width: 35%;
+    margin: 0;
   }
 }
 * {
