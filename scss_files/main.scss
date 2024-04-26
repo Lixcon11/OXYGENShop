@@ -220,81 +220,76 @@ $blue: #08A6E4;
                     border-color: $green;
                 }
 
-                &__header {
-                    display: inline-block;
-                    width: 49%;
-                    transform: translateY(-25%);
-
-                    &__tier {
-                        font-family: Raleway;
-                        font-size: 1.25rem;
-                        font-weight: 700;
-                        line-height: 1.5rem;
-                        
-                    }
-
-                    &__price {
-
-                        font-family: "Open Sans";
-                        font-size: 2.875rem;
-                        font-weight: 300;
-                        line-height: 4rem;
-
-                        &--red {
-                            color: $red;
+                &__features {
+                    &__header {
+                        display: inline-block;
+                        width: 55%;
+                        margin: auto 0px;
+                        height: 100%;
+    
+                        &__tier {
+                            font-family: Raleway;
+                            font-size: 1.25rem;
+                            font-weight: 700;
+                            line-height: 1.5rem;
+                            
                         }
-        
-                        &--blue {
-                            color: $blue;
+    
+                        &__price {
+    
+                            font-family: "Open Sans";
+                            font-size: 2.875rem;
+                            font-weight: 300;
+                            line-height: 4rem;
+    
+                            &--red {
+                                color: $red;
+                            }
+            
+                            &--blue {
+                                color: $blue;
+                            }
+            
+                            &--green {
+                                color: $green;
+                            }
                         }
-        
-                        &--green {
-                            color: $green;
+    
+                        &__limited {
+                            font-family: Raleway;
+                            font-size: 0.75rem;
+                            font-weight: 700;
+                            line-height: 0.9rem;
                         }
                     }
-
-                    &__limited {
-                        font-family: Raleway;
-                        font-size: 0.75rem;
-                        font-weight: 700;
-                        line-height: 0.9rem;
-                    }
-                }
-
-                &__body {
-                    display: inline-block;
-                    width: 40%;
-                    text-align: left;
-
-                    &__feature {
-                        /*
-                        &__check {
-                            display: inline-block;
-                            width: 8%;
-                        }*/
-
+    
+                    &__body {
+                        display: inline-block;
+                        width: 40%;
+                        text-align: left;
+    
                         &__paragraph {
                             margin: 10px 8px;
-
+    
                             &__image {
                                 margin-right: 10px;
                             }
                         }
                     }
+                }
+                
+                &__button {
 
-                    &__button {
+                    &--red {
 
-                        &--red {
-
-                        }
-        
-                        &--blue {
-        
-                        }
-        
-                        &--green {
-        
-                        }
+                    }
+    
+                    &--blue {
+    
+                    }
+    
+                    &--green {
+    
                     }
                 }
             }
@@ -307,6 +302,7 @@ $blue: #08A6E4;
 -Put header and body parts togheter to use the begin button
 
 */
+/*
 .container {
     display: block;
     position: relative;
@@ -339,29 +335,28 @@ $blue: #08A6E4;
     border-radius: 4px;
   }
 
-  /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
     background-color: #ffffff;
   }
   
-  /* When the checkbox is checked, add a blue background */
+
   .container input:checked ~ .checkmark {
     background-color: #ffffff;
   }
   
-  /* Create the checkmark/indicator (hidden when not checked) */
+ 
   .checkmark:after {
     content: "";
     position: absolute;
     display: none;
   }
   
-  /* Show the checkmark when checked */
+
   .container input:checked ~ .checkmark:after {
     display: block;
   }
   
-  /* Style the checkmark/indicator */
+
   .container .checkmark:after {
     left: 10px;
     top: 2px;
@@ -373,6 +368,7 @@ $blue: #08A6E4;
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+  */
 
 @media only screen and (min-width: 1000px) {
     .main {

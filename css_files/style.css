@@ -251,54 +251,48 @@
 .main__pricing__options-container__option--green {
   border-color: #55DFB4;
 }
-.main__pricing__options-container__option__header {
+.main__pricing__options-container__option__features__header {
   display: inline-block;
-  width: 49%;
-  transform: translateY(-25%);
+  width: 55%;
+  margin: auto 0px;
+  height: 100%;
 }
-.main__pricing__options-container__option__header__tier {
+.main__pricing__options-container__option__features__header__tier {
   font-family: Raleway;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.5rem;
 }
-.main__pricing__options-container__option__header__price {
+.main__pricing__options-container__option__features__header__price {
   font-family: "Open Sans";
   font-size: 2.875rem;
   font-weight: 300;
   line-height: 4rem;
 }
-.main__pricing__options-container__option__header__price--red {
+.main__pricing__options-container__option__features__header__price--red {
   color: #FB3B64;
 }
-.main__pricing__options-container__option__header__price--blue {
+.main__pricing__options-container__option__features__header__price--blue {
   color: #07ACE6;
 }
-.main__pricing__options-container__option__header__price--green {
+.main__pricing__options-container__option__features__header__price--green {
   color: #55DFB4;
 }
-.main__pricing__options-container__option__header__limited {
+.main__pricing__options-container__option__features__header__limited {
   font-family: Raleway;
   font-size: 0.75rem;
   font-weight: 700;
   line-height: 0.9rem;
 }
-.main__pricing__options-container__option__body {
+.main__pricing__options-container__option__features__body {
   display: inline-block;
   width: 40%;
   text-align: left;
 }
-.main__pricing__options-container__option__body__feature {
-  /*
-  &__check {
-      display: inline-block;
-      width: 8%;
-  }*/
-}
-.main__pricing__options-container__option__body__feature__paragraph {
+.main__pricing__options-container__option__features__body__paragraph {
   margin: 10px 8px;
 }
-.main__pricing__options-container__option__body__feature__paragraph__image {
+.main__pricing__options-container__option__features__body__paragraph__image {
   margin-right: 10px;
 }
 /*TODO
@@ -307,73 +301,73 @@
 -Put header and body parts togheter to use the begin button
 
 */
+/*
 .container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-}
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 1.5em;
-  width: 1.5em;
-  background-color: #ffffff;
-  border: 1px solid #95989A;
-  border-radius: 4px;
-}
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 1.5em;
+    width: 1.5em;
+    background-color: #ffffff;
+    border: 1px solid #95989A;
+    border-radius: 4px;
+  }
 
-/* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #ffffff;
-}
+    background-color: #ffffff;
+  }
 
-/* When the checkbox is checked, add a blue background */
-.container input:checked ~ .checkmark {
-  background-color: #ffffff;
-}
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
+  .container input:checked ~ .checkmark {
+    background-color: #ffffff;
+  }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
-  display: block;
-}
 
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  left: 10px;
-  top: 2px;
-  width: 10px;
-  height: 20px;
-  border: solid #08A6E4;
-  border-width: 0 1px 1px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
 
+
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+
+  .container .checkmark:after {
+    left: 10px;
+    top: 2px;
+    width: 10px;
+    height: 20px;
+    border: solid #08A6E4;
+    border-width: 0 1px 1px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  */
 @media only screen and (min-width: 1000px) {
   .main__advertising__slogan {
     font-size: 3rem;
