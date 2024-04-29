@@ -204,7 +204,7 @@
   height: 5.6em;
   width: 5.6em;
   border-radius: 41px;
-  transform: rotate(-0.125turn) translate(40%, 40%);
+  transform: rotate(-0.125turn) translate(35%, 40%);
 }
 .main__showcase__container__background-one__image {
   transform: rotate(45deg) translate(-50%, 48%);
@@ -456,73 +456,6 @@
   transform: rotate(45deg);
 }
 
-/*
-.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
-
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 1.5em;
-    width: 1.5em;
-    background-color: #ffffff;
-    border: 1px solid #95989A;
-    border-radius: 4px;
-  }
-
-.container:hover input ~ .checkmark {
-    background-color: #ffffff;
-  }
-
-
-  .container input:checked ~ .checkmark {
-    background-color: #ffffff;
-  }
-
-
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-
-
-  .container input:checked ~ .checkmark:after {
-    display: block;
-  }
-
-
-  .container .checkmark:after {
-    left: 10px;
-    top: 2px;
-    width: 10px;
-    height: 20px;
-    border: solid #08A6E4;
-    border-width: 0 1px 1px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-  */
 @media only screen and (min-width: 1000px) {
   .main__advertising__slogan {
     font-size: 3rem;
@@ -549,7 +482,7 @@
     width: 75%;
   }
   .main__showcase {
-    padding: 5% 10%;
+    padding: 8% 10%;
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -627,13 +560,47 @@
   .main__showcase__background-three__image {
     transform: translate(0px, 50%);
   }
+  .main__pricing {
+    margin-top: 100px;
+  }
+  .main__pricing__title {
+    margin-bottom: 60px;
+  }
   .main__pricing__options-container {
     display: flex;
     justify-content: space-around;
-    margin-top: px;
   }
   .main__pricing__options-container__option {
-    padding: 0px 8%;
+    padding: 0px 8.5%;
+  }
+  .main__pricing__options-container__option:hover {
+    padding: 0px 12%;
+    margin-top: -25px;
+    margin-bottom: 0.01%;
+  }
+  .main__pricing__options-container__option:hover .main__pricing__options-container__option__button {
+    transform: translateY(200%);
+  }
+  .main__pricing__options-container__option--red:hover {
+    box-shadow: 5px 10px 27px 0px rgba(251, 59, 100, 0.2901960784);
+  }
+  .main__pricing__options-container__option--red:hover .main__pricing__options-container__option__button {
+    box-shadow: 5px 10px 27px 0px rgba(251, 59, 100, 0.2901960784);
+  }
+  .main__pricing__options-container__option--blue:hover {
+    box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
+  }
+  .main__pricing__options-container__option--blue:hover .main__pricing__options-container__option__button {
+    box-shadow: 5px 10px 27px 0px rgba(7, 172, 230, 0.2901960784);
+  }
+  .main__pricing__options-container__option--green:hover {
+    box-shadow: 5px 10px 27px 0px rgba(85, 223, 180, 0.2901960784);
+  }
+  .main__pricing__options-container__option--green:hover .main__pricing__options-container__option__button {
+    box-shadow: 5px 10px 27px 0px rgba(85, 223, 180, 0.2901960784);
+  }
+  .main__pricing__options-container__option__features {
+    margin-bottom: 40px;
   }
   .main__pricing__options-container__option__features__header {
     display: block;
