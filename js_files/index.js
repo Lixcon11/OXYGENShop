@@ -33,14 +33,10 @@ class Slider {
         this.prevPositionButton = this.classPosition + "__prev";
         this.nextPositionButton = this.classPosition + "__next";
     }
-
-    //classPosition = document.getElementById(this.id).className;
-
+    
     createSlider() {
-        //const classPosition = document.getElementById(this.id).className;
         const container = document.getElementsByClassName(this.classPosition)[0];
         easySet (container, ["max-width: 65%", "max-height:1%","position: relative", "margin: auto"]);
-        //const imageContainerPosition = classPosition + "__image-container";
         const imagePosition = this.imageContainerPosition + "__image";
         let imageCount = 0;
 
@@ -52,7 +48,7 @@ class Slider {
         }
 
         //encapsulate images
-        for (let i = 1; (imageCount + 1) > i; ++i) {
+        for(let i = 1; (imageCount + 1) > i; ++i) {
             const position = imagePosition + i;
             const classElement = document.getElementsByClassName(position)[0];
             const encapsulationDiv = document.createElement("div");
@@ -81,17 +77,28 @@ class Slider {
         prev.appendChild(document.createTextNode('\u276E'));
         prev.className = this.prevPositionButton;
         easySet(prev, buttonStyle);
+        prev.addEventListener('mouseover',() => {
+            prev.style.backgroundColor = "#717171";
+        })
+        prev.addEventListener('mouseout',() => {
+            prev.style.backgroundColor = "#00000050";
+        })
         const next = document.createElement("a");
         container.appendChild(next);
         next.appendChild(document.createTextNode('\u276F'));
         next.className = this.nextPositionButton;
         const nextButtonStyle = buttonStyle.concat(["right: 0"]);
         easySet(next, nextButtonStyle);
+        next.addEventListener('mouseover',() => {
+            next.style.backgroundColor = "#717171";
+        })
+        next.addEventListener('mouseout',() => {
+            next.style.backgroundColor = "#00000050";
+        })
         
         //create dots
         const dotContainer = document.createElement("div");
         container.appendChild(dotContainer);
-        //const dotPosition = this.classPosition + "__dot-container";
         dotContainer.className = this.dotContainerPosition;
         easySet(dotContainer, ["text-align:center"]);
         for (let i = 1; (imageCount + 1) > i; ++i) {
@@ -115,18 +122,15 @@ class Slider {
                 dot.style.backgroundColor = "#bbb";
             })
         }
-        console.log(this.imageContainerPosition);
-
     }
 
     startLogic() {
         let slideIndex = 1;
+        const slides = document.getElementsByClassName(this.imageContainerPosition);
+        const dots = document.getElementsByClassName(this.dotContainerPosition)[0].children;
 
         const showSlides = (n) =>{
           let i;
-          console.log(this.imageContainerPosition);
-          let slides = document.getElementsByClassName(this.imageContainerPosition);
-          let dots = document.getElementsByClassName(this.dotContainerPosition)[0].children;
           if (n > slides.length) {slideIndex = 1}
           if (n < 1) {slideIndex = slides.length}
           for (i = 0; i < slides.length; i++) {
@@ -140,9 +144,6 @@ class Slider {
           dots[slideIndex-1].className += " active";
         }
 
-        showSlides(slideIndex);
-
-        // Next/previous controls
         document.getElementsByClassName(this.prevPositionButton)[0].addEventListener("click", () => {
             showSlides(slideIndex += -1);
         })
@@ -151,17 +152,14 @@ class Slider {
             showSlides(slideIndex += 1);
         })
 
+        for(let i = 0; dots.length   > i; ++i) {
+            dots[i].addEventListener("click", () => {
+                showSlides(slideIndex = i+1);
+            })
+        }
 
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
-          }
-          
-          // Thumbnail image controls
-          function currentSlide(n) {
-            showSlides(slideIndex = n);
-          }
+        showSlides(slideIndex);
     }
-
 }
 
 

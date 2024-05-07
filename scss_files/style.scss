@@ -13,7 +13,7 @@ body {
 }
 
 .active {
-   background-color: #717171;
+   background-color: #717171 !important;
 }
 
 .fade {
@@ -25,3 +25,4 @@ body {
    from {opacity: .4}
    to {opacity: 1}
  }
+
