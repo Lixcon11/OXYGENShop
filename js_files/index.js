@@ -1,6 +1,6 @@
 //import { setAttributesByArray as easySet, divWithImages } from "./helper.js";
 import sliderBuilder from "./sliderBuilder.js";
 
-const showCaseImages = ["../jpeg/keyboard.jpeg", "../jpeg/plane.jpeg", "../jpeg/moon.jpeg"];
+const showCaseImages = ["../jpg/keyboard.jpg", "../jpg/plane.jpg", "../jpg/moon.jpg"];
 
 sliderBuilder("slider", "main", "main__questions", showCaseImages);
