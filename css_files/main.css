@@ -387,6 +387,21 @@
   color: white;
   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
 }
+.main__up-button {
+  position: fixed;
+  z-index: 99;
+  bottom: 25px;
+  right: 15%;
+  border: 1px solid #08A6E4;
+  border-radius: 30px;
+  background-color: white;
+  color: #08A6E4;
+  padding: 5px;
+  font-family: Raleway;
+  font-weight: 600;
+  font-size: 1rem;
+  width: 6em;
+}
 
 .main__questions__invoice__check-container .main__questions__invoice__check-container__checkmark:after {
   left: 7px;
@@ -586,6 +601,9 @@
   .main__questions__invoice {
     width: 35%;
     margin: 0;
+  }
+  .main__up-button {
+    right: 5%;
   }
 }
 
