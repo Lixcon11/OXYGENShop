@@ -156,6 +156,29 @@
   font-size: 2.25rem;
   line-height: 2.6rem;
 }
+.main__pricing__divise-options {
+  margin: 50px 0px;
+}
+.main__pricing__divise-options__button {
+  font-family: "Open Sans";
+  font-weight: 400;
+  font-size: 1.2rem;
+  width: 20%;
+  height: 30px;
+  border-radius: 18px;
+  border: 0px;
+  color: white;
+  margin: 0px 10px;
+}
+.main__pricing__divise-options__button--EUR {
+  background-color: #FB3B64;
+}
+.main__pricing__divise-options__button--USD {
+  background-color: #07ACE6;
+}
+.main__pricing__divise-options__button--GBP {
+  background-color: #55DFB4;
+}
 .main__pricing__options-container {
   margin: 15px 10%;
 }
@@ -486,6 +509,13 @@
   }
   .main__pricing__title {
     margin-bottom: 60px;
+  }
+  .main__pricing__divise-options__button {
+    font-size: 2rem;
+    width: 15%;
+    height: 45px;
+    margin: 0px 20px;
+    transform: translateX(-6%);
   }
   .main__pricing__options-container {
     display: flex;

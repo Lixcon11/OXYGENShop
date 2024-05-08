@@ -6,3 +6,6 @@ const showCaseImages = ["https://talkingstuff.net/wp-content/uploads/2019/06/blu
 "https://s.turbifycdn.com/aah/yhst-68986320726817/find-your-joy-purple-blue-wallpaper-border-bp8124bd-57.gif"];
 
 sliderBuilder("slider", "main", "main__questions", showCaseImages);
+
+
+

@@ -199,6 +199,34 @@ $blue: #08A6E4;
             line-height: 2.6rem;
         }
 
+        &__divise-options {
+            margin: 50px 0px;
+
+            &__button {
+                font-family: "Open Sans";
+                font-weight: 400;
+                font-size: 1.2rem;
+                width: 20%;
+                height: 30px;
+                border-radius: 18px;
+                border: 0px;
+                color: white;
+                margin: 0px 10px;
+
+                &--EUR {
+                    background-color: $red;
+                }
+
+                &--USD {
+                    background-color: $blue;
+                }
+
+                &--GBP {
+                    background-color: $green;
+                }
+            }
+        }
+
         &__options-container {
             margin: 15px 10%;
 
@@ -618,6 +646,16 @@ $blue: #08A6E4;
                 margin-bottom: 60px;
             }
 
+            &__divise-options {
+                &__button {
+                    font-size: 2rem;
+                    width: 15%;
+                    height: 45px;
+                    margin: 0px 20px;
+                    transform: translateX(-6%);
+                }
+            }
+
             &__options-container {
                 display: flex;
                 justify-content: space-around;
@@ -674,7 +712,6 @@ $blue: #08A6E4;
                             width: auto;
                             text-align: center;
                         }
-
                     }
 
                     &__button {
