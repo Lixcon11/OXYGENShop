@@ -395,6 +395,9 @@
   border: 0;
   border-bottom: 1px solid #08A6E4;
 }
+.main__questions__invoice__input--invalid-input {
+  border-bottom: 1px solid #FB3B64;
+}
 .main__questions__invoice__check-container {
   display: block;
   transform: translate(0px, 2px);
@@ -433,6 +436,9 @@
   background-color: #ffffff;
   border: 1px solid #95989A;
   border-radius: 4px;
+}
+.main__questions__invoice__check-container__checkmark--unchecked {
+  border: 1px solid #FB3B64;
 }
 .main__questions__invoice__check-container__checkmark:after {
   content: "";
@@ -682,7 +688,7 @@
     margin: 0;
   }
   .main__up-button {
-    right: 5%;
+    right: 4.5%;
   }
 }
 .footer {
