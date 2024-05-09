@@ -522,16 +522,17 @@ $red: #FB3B64;
         background-color: rgb(0,0,0);
         background-color: rgba(0,0,0,0.4);
         
-
         &__content {
             background-color: #fefefe;
             margin: 15% auto;
             padding: 20px;
             border: 1px solid #888;
             width: 80%;
+            border: 0px;
+            border-radius: 30px;
 
             &__close {
-                color: #aaa;
+                color: $blue;
                 float: right;
                 font-size: 28px;
                 font-weight: bold;

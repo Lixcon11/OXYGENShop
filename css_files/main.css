@@ -426,9 +426,11 @@
   padding: 20px;
   border: 1px solid #888;
   width: 80%;
+  border: 0px;
+  border-radius: 30px;
 }
 .main__popup__content__close {
-  color: #aaa;
+  color: #08A6E4;
   float: right;
   font-size: 28px;
   font-weight: bold;

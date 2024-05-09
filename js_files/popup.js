@@ -7,7 +7,6 @@ const popupInput = document.querySelector(".main__popup__content__input");
 const popupButton = document.querySelector(".main__popup__content__button-container__button");
 const popupCross = document.querySelector(".main__popup__content__close");
 
-
 const getPopup = () => {
     const exit = () => {
         popup.style.display = "none";
@@ -33,8 +32,10 @@ const getPopup = () => {
     popupCross.addEventListener("click", () => {
         exit();
     })
-    window.addEventListener("click", () => {
-        exit();
+    window.addEventListener("click", (event) => {
+        if(event.target === popup) {
+            exit();
+        }
     })
     const EscapePressed = () => {
         exit();

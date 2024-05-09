@@ -9,6 +9,10 @@
    scroll-behavior: smooth;
 }
 
+body {
+   min-width: 320px;
+}
+
 .progress-bar {
    position: fixed;
    top: 0;
@@ -20,8 +24,64 @@
    transition: width 0.2s ease-out;
 }
 
-body {
-   min-width: 320px;
+.slider {
+   max-width: 65%;
+   max-height:1%;
+   position: relative;
+   margin: 30px auto;
+
+   &__image-container{
+      display: none;
+
+      &__image {
+         width: 100%;
+      }
+   }
+
+   &__button {
+      cursor: pointer; 
+      position: absolute; 
+      top: 50%;
+      width: auto; 
+      margin-top: -22px;
+      padding: 6px 12px;
+      color: #fff5ee;
+      background-color: #00000050;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border: 1px solid #fff5ee;
+      border-radius: 50px;
+      user-select: none;
+
+      &:hover {
+         background-color: #717171;
+      }
+
+      &--next {
+         right: 0;
+      }
+   }
+
+   &__dot-container {
+      text-align: center;
+
+      &__dot {
+         cursor: pointer;
+         height: 15px;
+         width: 15px;
+         margin: 0 2px;
+         background-color: #bbb;
+         border-radius: 50%;
+         display: inline-block;
+         transition: background-color 0.6s ease;
+         transform: translateY(-25px);
+
+         &:hover {
+            background-color: #717171;
+         }
+      }
+   }
 }
 
 .active {
@@ -37,4 +97,3 @@ body {
    from {opacity: .4}
    to {opacity: 1}
  }
-
