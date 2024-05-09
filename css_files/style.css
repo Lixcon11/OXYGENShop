@@ -826,6 +826,17 @@
   scroll-behavior: smooth;
 }
 
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: #FB3B64;
+  width: 0%;
+  z-index: 100;
+  transition: width 0.2s ease-out;
+}
+
 body {
   min-width: 320px;
 }
