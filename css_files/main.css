@@ -409,23 +409,23 @@
   width: 6em;
 }
 .main__popup {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 .main__popup__content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size*/
+  width: 80%;
 }
 .main__popup__content__close {
   color: #aaa;
@@ -443,6 +443,23 @@
   text-decoration: none;
   cursor: pointer;
 }
+.main__popup__content__text {
+  text-align: center;
+  margin-bottom: 25px;
+  font-family: Raleway;
+  font-weight: 400;
+  font-size: 2.1rem;
+  color: #08A6E4;
+}
+.main__popup__content__label {
+  font-family: "Open Sans";
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 0.9375rem;
+  letter-spacing: 0.2rem;
+  color: #08A6E4;
+  text-transform: uppercase;
+}
 .main__popup__content__input {
   margin-top: 10px;
   margin-bottom: 25px;
@@ -453,6 +470,22 @@
 }
 .main__popup__content__input--invalid-input {
   border-bottom: 1px solid #FB3B64;
+}
+.main__popup__content__button-container {
+  text-align: center;
+}
+.main__popup__content__button-container__button {
+  font-family: "Open Sans";
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 1.1rem;
+  width: 17em;
+  height: 4.5em;
+  border: 0px;
+  border-radius: 35px;
+  background-color: #08A6E4;
+  color: white;
+  box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
 }
 
 .main__questions__invoice__check-container .main__questions__invoice__check-container__checkmark:after {
@@ -656,6 +689,9 @@
   }
   .main__up-button {
     right: 4.5%;
+  }
+  .main__popup__content {
+    width: 40%;
   }
 }
 

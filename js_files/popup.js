@@ -4,7 +4,7 @@ import sendData from "./apiToFetch.js"
 //localStorage.removeItem("main__popup");
 const popup = document.querySelector(".main__popup");
 const popupInput = document.querySelector(".main__popup__content__input");
-const popupButton = document.querySelector(".main__popup__content__button");
+const popupButton = document.querySelector(".main__popup__content__button-container__button");
 const popupCross = document.querySelector(".main__popup__content__close");
 
 
