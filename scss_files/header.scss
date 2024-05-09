@@ -26,10 +26,52 @@ $blue: #08A6E4;
             display: inline-block;
             text-align: right;
             width: 60%;
+
+            &__close {
+                display: none;
+                color: $blue;
+                font-weight: 800;
+                font-size: 1.6rem;
+            }
         }
 
         &__tab {
             display: none;
+        }
+
+        &__dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            width: 100%;
+            border: 1px solid white;
+            box-shadow: 0px 3px 3px 0px #0000004A;
+            padding: 30px 0px;
+            z-index: 1;
+
+            &__tab {
+                display: flex;
+                align-items: center;
+                color: currentColor;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-family: "Open Sans";
+                font-weight: 700;
+                font-size: 0.68rem;
+                color: #A5A5A5;
+                line-height: 1rem;
+                letter-spacing: 0.2rem;
+                justify-self: center;
+                height: 100%;
+                padding: 0 1em;
+                text-align: center;
+                margin-left: 15px;
+                margin-top: 10px;
+
+                &:hover {
+                    color: #000000;
+                }
+            }
         }
     }
 }

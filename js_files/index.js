@@ -5,6 +5,7 @@ import getUp from "./upButton.js";
 import checkValidation from "./inputValidationForm.js";
 import getPopup from "./popup.js"
 import activateProgressBar from "./activateProgressBar.js"
+import displayDropdow from "./burguerDropdown.js";
 
 //create Slider
 const showCaseImages = ["./jpg/keyboard.jpg", "./jpg/plane.jpg", "./jpg/moon.jpg"];
@@ -26,3 +27,6 @@ getPopup();
 
 //ProgressBar
 activateProgressBar();
+
+//burger
+displayDropdow();
