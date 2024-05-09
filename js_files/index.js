@@ -8,6 +8,7 @@ import activateProgressBar from "./activateProgressBar.js"
 import displayDropdow from "./burguerDropdown.js";
 
 //create Slider
+//TODO: crear estilos slider en style, rehacer la generecion de etiquetas de class, eliminar easyset, poner divwitimages en sliderbuild, elminar helper
 const showCaseImages = ["./jpg/keyboard.jpg", "./jpg/plane.jpg", "./jpg/moon.jpg"];
 
 sliderBuilder("slider", "main", "main__questions", showCaseImages);

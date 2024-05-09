@@ -6,8 +6,6 @@ const sliderBuilder = (idName, startPosition, aboveElementPosition, images) => {
 
     imageDiv.id = idName;
     
-    //const starttingPosition = startPosition;
-    
     const aboveElement = document.querySelector(`.${aboveElementPosition}`);
     
     imageDiv.className = `${startPosition}__slider`;
@@ -15,9 +13,6 @@ const sliderBuilder = (idName, startPosition, aboveElementPosition, images) => {
     aboveElement.before(imageDiv);
 
     const mySlider = new Slider(imageDiv.id)
-
-    mySlider.createSlider();
-    mySlider.startLogic();
 };
 
 export default sliderBuilder;

@@ -8,6 +8,8 @@ class Slider {
         this.dotContainerPosition = this.classPosition + "__dot-container";
         this.prevPositionButton = this.classPosition + "__prev";
         this.nextPositionButton = this.classPosition + "__next";
+        this.createSlider();
+        this.startLogic();
     }
 
     createSlider() {
