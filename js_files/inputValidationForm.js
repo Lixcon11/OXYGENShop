@@ -7,36 +7,38 @@ const checkmark = document.querySelector(".main__questions__invoice__check-conta
 const sendButton = document.querySelector(".main__questions__invoice__button-container__button");
 const invalidFormClass = "main__questions__invoice__input--invalid-input";
 const uncheckedClass = "main__questions__invoice__check-container__checkmark--unchecked";
+const validEmail = "https://www.emailregex.com/"
 
-const wordChecker = (word) => {
-    return [...word].every(char => isNaN(char))
-}
 const checkValidation = () => {
     sendButton.addEventListener("click",() => {
-    
-        if(wordChecker(name.value)) {
-            name.classList.remove(invalidFormClass);
-        }
-        else if(!wordChecker(name.value)) {
-            name.classList.add(invalidFormClass);
-        }
-        if(email.value == "https://www.emailregex.com/") {
-            email.classList.remove(invalidFormClass);
-        }
-        else if(email.value != "https://www.emailregex.com/") {
-            email.classList.add(invalidFormClass);
-        }
-        if(checkbox.checked) {
-            checkmark.classList.remove(uncheckedClass);
-        }
-        else if(!checkbox.checked) {
-            checkmark.classList.add(uncheckedClass);
-        }
-    
-        if(wordChecker(name.value) && email.value == "https://www.emailregex.com/" && checkbox.checked) {
+        const nameCondition = wordChecker(name.value) && name.value.length >= 2 && name.value.length <= 100;
+        const emailCondition = email.value == validEmail;
+        const checkCondition = checkbox.checked;
+
+        checkIfValid(nameCondition, name, invalidFormClass)
+        checkIfValid(emailCondition, email, invalidFormClass)
+        checkIfValid(checkCondition, checkmark, uncheckedClass)
+
+        if(nameCondition && emailCondition && checkCondition) {
             sendData({name: name.value, email: email.value});
         }
+        
     })  
 }
 
+const checkIfValid = (condition, object, style) => {
+    if(condition) {
+        object.classList.remove(style)
+    }
+    else {
+        object.classList.add(style)
+    }
+}
+const wordChecker = (word) => {
+    return [...word].every(char => isNaN(char))
+}
+
+
+
 export default checkValidation;
+export { checkIfValid, wordChecker, validEmail};
