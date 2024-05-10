@@ -28,6 +28,7 @@
   max-width: 440px;
   width: 80%;
   margin-top: 30px;
+  cursor: pointer;
 }
 .main__image_container {
   overflow: hidden;
@@ -169,6 +170,7 @@
   border: 0px;
   color: white;
   margin: 0px 10px;
+  cursor: pointer;
 }
 .main__pricing__divise-options__button--EUR {
   background-color: #FB3B64;
@@ -255,6 +257,7 @@
   border: 0px;
   color: white;
   transform: translateY(50%);
+  cursor: pointer;
 }
 .main__pricing__options-container__option__button--red {
   background-color: #FB3B64;
@@ -315,6 +318,7 @@
   display: block;
   border: 0;
   border-bottom: 1px solid #08A6E4;
+  cursor: text;
 }
 .main__questions__invoice__input--invalid-input {
   border-bottom: 1px solid #FB3B64;
@@ -392,6 +396,7 @@
   background-color: #08A6E4;
   color: white;
   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  cursor: pointer;
 }
 .main__up-button {
   position: fixed;
@@ -407,6 +412,10 @@
   font-weight: 600;
   font-size: 1rem;
   width: 6em;
+  cursor: pointer;
+}
+.main__up-button:hover {
+  background-color: rgb(223, 246, 255);
 }
 .main__popup {
   display: none;
@@ -469,6 +478,7 @@
   display: block;
   border: 0;
   border-bottom: 1px solid #08A6E4;
+  cursor: text;
 }
 .main__popup__content__input--invalid-input {
   border-bottom: 1px solid #FB3B64;
@@ -488,6 +498,7 @@
   background-color: #08A6E4;
   color: white;
   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  cursor: pointer;
 }
 
 .main__questions__invoice__check-container .main__questions__invoice__check-container__checkmark:after {

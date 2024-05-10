@@ -32,6 +32,11 @@ $blue: #08A6E4;
                 color: $blue;
                 font-weight: 800;
                 font-size: 1.6rem;
+                cursor: pointer;
+            }
+
+            &__image {
+                cursor: pointer;
             }
         }
 

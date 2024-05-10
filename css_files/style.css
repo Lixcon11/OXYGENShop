@@ -26,6 +26,10 @@
   color: #08A6E4;
   font-weight: 800;
   font-size: 1.6rem;
+  cursor: pointer;
+}
+.header__navbar__menu__image {
+  cursor: pointer;
 }
 .header__navbar__tab {
   display: none;
@@ -145,6 +149,7 @@
   max-width: 440px;
   width: 80%;
   margin-top: 30px;
+  cursor: pointer;
 }
 .main__image_container {
   overflow: hidden;
@@ -286,6 +291,7 @@
   border: 0px;
   color: white;
   margin: 0px 10px;
+  cursor: pointer;
 }
 .main__pricing__divise-options__button--EUR {
   background-color: #FB3B64;
@@ -372,6 +378,7 @@
   border: 0px;
   color: white;
   transform: translateY(50%);
+  cursor: pointer;
 }
 .main__pricing__options-container__option__button--red {
   background-color: #FB3B64;
@@ -432,6 +439,7 @@
   display: block;
   border: 0;
   border-bottom: 1px solid #08A6E4;
+  cursor: text;
 }
 .main__questions__invoice__input--invalid-input {
   border-bottom: 1px solid #FB3B64;
@@ -509,6 +517,7 @@
   background-color: #08A6E4;
   color: white;
   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  cursor: pointer;
 }
 .main__up-button {
   position: fixed;
@@ -524,6 +533,10 @@
   font-weight: 600;
   font-size: 1rem;
   width: 6em;
+  cursor: pointer;
+}
+.main__up-button:hover {
+  background-color: rgb(223, 246, 255);
 }
 .main__popup {
   display: none;
@@ -586,6 +599,7 @@
   display: block;
   border: 0;
   border-bottom: 1px solid #08A6E4;
+  cursor: text;
 }
 .main__popup__content__input--invalid-input {
   border-bottom: 1px solid #FB3B64;
@@ -605,6 +619,7 @@
   background-color: #08A6E4;
   color: white;
   box-shadow: 5px 10px 14px 0px rgba(7, 172, 230, 0.2901960784);
+  cursor: pointer;
 }
 
 .main__questions__invoice__check-container .main__questions__invoice__check-container__checkmark:after {
@@ -910,7 +925,7 @@ body {
   user-select: none;
 }
 .slider__button:hover {
-  background-color: #717171;
+  background-color: rgba(113, 113, 113, 0.5647058824);
 }
 .slider__button--next {
   right: 0;
@@ -923,7 +938,7 @@ body {
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: rgba(187, 187, 187, 0.5215686275);
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
