@@ -2,15 +2,9 @@ import Slider from "./slider.js";
 
 const sliderBuilder = (idName, startPosition, aboveElementPosition, images) => {
     const imageDiv = divWithImages(images);
-
     imageDiv.id = idName;
-    
     const aboveElement = document.querySelector(`.${aboveElementPosition}`);
-    
-    imageDiv.className = `${startPosition}__slider`;
-    
     aboveElement.before(imageDiv);
-
     const mySlider = new Slider(imageDiv.id)
 };
 
@@ -22,7 +16,6 @@ const divWithImages = (imageArray) => {
         image.src = element;
         newDiv.appendChild(image);
     });
-
     return newDiv;
 };
 

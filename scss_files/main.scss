@@ -385,29 +385,45 @@ $red: #FB3B64;
         &__invoice {
             margin-top: 45px;
 
-            &__label {
-                display: block;
-                font-family: "Open Sans";
-                font-size: 0.7rem;
-                font-weight: 600;
-                line-height: 0.9375rem;
-                letter-spacing: 0.2rem;
-                color: $blue;
-                text-transform: uppercase;
-                margin-top: 25px;
-            }
+            &__container {
+                position: relative;
 
-            &__input {
-                margin-top: 10px;
-                margin-bottom: 25px;
-                width: 100%;
-                display: block;
-                border: 0;
-                border-bottom: 1px solid $blue;
-                cursor: text;
+                &__label {
+                    display: block;
+                    font-family: "Open Sans";
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    line-height: 0.9375rem;
+                    letter-spacing: 0.2rem;
+                    color: $blue;
+                    text-transform: uppercase;
+                    margin-top: 25px;
+                }
+    
+                &__input {
+                    margin-top: 10px;
+                    margin-bottom: 25px;
+                    width: 100%;
+                    display: block;
+                    border: 0;
+                    border-bottom: 1px solid $blue;
+                    cursor: text;
+    
+                    &--invalid-input {
+                        border-bottom: 3px solid $red;
+                    }
+                }
+    
+                &__symbol{
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 15px;
+                    color: $red;
 
-                &--invalid-input {
-                    border-bottom: 1px solid $red;
+                    &--invalid {
+                        display: block;
+                    }
                 }
             }
 
@@ -455,7 +471,7 @@ $red: #FB3B64;
                     border-radius: 4px;
 
                     &--unchecked {
-                        border: 1px solid $red;
+                        border: 2px solid $red;
                     }
 
                     &:after {
@@ -502,7 +518,8 @@ $red: #FB3B64;
     &__up-button {
         position: fixed;
         z-index: 99;
-        bottom: 25px;
+        bottom: -100%;
+        opacity:0;
         right: 15%;
         border: 1px solid $blue;
         border-radius: 30px;
@@ -514,7 +531,10 @@ $red: #FB3B64;
         font-size: 1rem;
         width: 6em;
         cursor: pointer;
-        
+        animation: smooth-appear 1.5s ease forwards;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+
         &:hover {
             background-color: rgb(223, 246, 255);
         }
@@ -569,27 +589,43 @@ $red: #FB3B64;
                 color: $blue;
             }
 
-            &__label {
-                font-family: "Open Sans";
-                font-size: 0.7rem;
-                font-weight: 600;
-                line-height: 0.9375rem;
-                letter-spacing: 0.2rem;
-                color: $blue;
-                text-transform: uppercase;
-            }
+            &__container {
+                position: relative;
 
-            &__input {
-                margin-top: 10px;
-                margin-bottom: 25px;
-                width: 100%;
-                display: block;
-                border: 0;
-                border-bottom: 1px solid $blue;
-                cursor: text;
-
-                &--invalid-input {
-                    border-bottom: 1px solid $red;
+                &__label {
+                    font-family: "Open Sans";
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    line-height: 0.9375rem;
+                    letter-spacing: 0.2rem;
+                    color: $blue;
+                    text-transform: uppercase;
+                }
+    
+                &__input {
+                    margin-top: 10px;
+                    margin-bottom: 25px;
+                    width: 100%;
+                    display: block;
+                    border: 0;
+                    border-bottom: 1px solid $blue;
+                    cursor: text;
+    
+                    &--invalid-input {
+                        border-bottom: 3px solid $red;
+                    }
+                }
+    
+                &__symbol{
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    top: 15px;
+                    color: $red;
+    
+                    &--invalid {
+                        display: block;
+                    }
                 }
             }
 
@@ -777,30 +813,51 @@ $red: #FB3B64;
             }
 
             &__divise-options {
+
                 &__button {
                     font-size: 2rem;
                     width: 15%;
                     height: 45px;
-                    margin: 0px 20px;
-                    transform: translateX(-6%);
+                    margin: 0px 3.5%;
+                    //transform: translateX(-6%);
                 }
             }
 
             &__options-container {
-                display: flex;
-                justify-content: space-around;
+                margin: auto;
+                display: grid;
+                grid-template: repeat(36, 1fr) / repeat(36, 1fr);
+                height: 500px;
+                width: 100%;
 
                 &__option {
-                    padding: 0px 8.5%;
 
-                    &:hover {
-                        padding: 0px 12%;
-                        margin-top: -25px;
-                        margin-bottom: 0.01%;
+                    &--red {
+                        grid-area: 3 / 8 / span 33 / span 6;
+
+                        &:hover{
+                            grid-area: 2 / 7 / span 35 / span 8;
+                        }
+                    }
+
+                    &--blue {
+                        grid-area: 3 / 16 / span 33 / span 6;
+
+                        &:hover {
+                            grid-area: 2 / 15 / span 35 / span 8;
+                        }
+                    }
+
+                    &--green {
+                        grid-area: 3 / 24 / span 33 / span 6;
+
+                        &:hover {
+                            grid-area: 2 / 23 / span 35 / span 8;
+                        }
                     }
 
                     &:hover &__button {
-                        transform: translateY(200%);
+                        transform: translateY(75%);
                     }
 
                     &--red:hover {
@@ -845,7 +902,8 @@ $red: #FB3B64;
                     }
 
                     &__button {
-                        width: 100%;
+                        width: 60%;
+                        transform: translateY(10%);
                     }
                 }
             }

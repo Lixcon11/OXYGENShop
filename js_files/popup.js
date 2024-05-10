@@ -1,13 +1,14 @@
 import { checkIfValid, validEmail } from "./inputValidationForm.js";
 import sendData from "./apiToFetch.js"
 
-//localStorage.removeItem("main__popup");
-const popup = document.querySelector(".main__popup");
-const popupInput = document.querySelector(".main__popup__content__input");
-const popupButton = document.querySelector(".main__popup__content__button-container__button");
-const popupCross = document.querySelector(".main__popup__content__close");
-
 const getPopup = () => {
+    //localStorage.removeItem("main__popup");
+    const popup = document.querySelector(".main__popup");
+    const popupInput = document.querySelector(".main__popup__content__container__input");
+    const popupButton = document.querySelector(".main__popup__content__button-container__button");
+    const popupCross = document.querySelector(".main__popup__content__close");
+    const warning = document.querySelector(".main__popup__content__container__symbol");
+
     const exit = () => {
         popup.style.display = "none";
         localStorage.setItem("main__popup", "true");
@@ -23,9 +24,9 @@ const getPopup = () => {
         }
     });
     popupButton.addEventListener("click", () => {
-        checkIfValid(popupInput.value == validEmail, popupInput, "main__popup__content__input--invalid-input");
-
-        if(popupInput.value == validEmail) {
+        checkIfValid(validEmail.test(popupInput.value), [popupInput, warning], ["main__popup__content__container__input--invalid-input","main__popup__content__container__symbol--invalid"]);
+        console.log(validEmail.test(popupInput.value))
+        if(validEmail.test(popupInput.value)) {
             sendData({email: popupInput.value})
         }
     })
