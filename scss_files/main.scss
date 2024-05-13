@@ -129,6 +129,7 @@ $red: #FB3B64;
             background-color: white;
             margin: 0px auto 20px;
             padding: 15px 20px 25px;
+            overflow: hidden;
 
             &__text {
 
@@ -159,9 +160,11 @@ $red: #FB3B64;
                 height: 5.6em;
                 width: 5.6em;
                 border-radius: 41px;
-                transform: rotate(-0.125turn) translate(35%, 40%);
+                transform: rotate(-0.125turn) translate(35%, 45%);
                 
                 &__image {
+                    width: auto;
+                    height: 100%;
                     transform: rotate(45deg) translate(-50% , 48%);
                 }
             }
@@ -172,6 +175,12 @@ $red: #FB3B64;
                 height: 8.2em;
                 width: 8.2em;
                 border-radius: 50%;
+
+                &__image {
+                    width: auto;
+                    height: 100%;
+                }
+
             }
         }
 
@@ -520,16 +529,17 @@ $red: #FB3B64;
         z-index: 99;
         bottom: -100%;
         opacity:0;
-        right: 15%;
-        border: 1px solid $blue;
-        border-radius: 30px;
+        right: 1%;
+        border: 2px solid $blue;
+        border-radius: 50px;
         background-color: white;
         color: $blue;
-        padding: 5px;
+        padding: 2px;
         font-family: Raleway;
-        font-weight: 600;
-        font-size: 1rem;
-        width: 6em;
+        font-weight: 800;
+        font-size: 1.5rem;
+        width: 1.5em;
+        margin-bottom: -22px;
         cursor: pointer;
         animation: smooth-appear 1.5s ease forwards;
         animation-duration: 1.5s;
@@ -777,8 +787,6 @@ $red: #FB3B64;
                     border-radius: 41px;
 
                     &__image {
-                        width: auto;
-                        height: 100%;
                         transform: rotate(45deg) translate(-37% , 48%);
                     }
                 }
@@ -786,11 +794,6 @@ $red: #FB3B64;
                 &__background-two {
                     width: 20em;
                     height: 20em;
-
-                    &__image {
-                        width: auto;
-                        height: 100%;
-                    }
                 }
             }
 
@@ -941,7 +944,8 @@ $red: #FB3B64;
         }
 
         &__up-button {
-            right: 4.5%;
+            right: 2%;
+            margin-bottom: 0px;
         }
 
         &__popup {
