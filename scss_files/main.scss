@@ -810,6 +810,7 @@ $red: #FB3B64;
 
         &__pricing {
             margin-top: 100px;
+            margin-bottom: 130px;
 
             &__title {
                 margin-bottom: 60px;
@@ -822,7 +823,6 @@ $red: #FB3B64;
                     width: 15%;
                     height: 45px;
                     margin: 0px 3.5%;
-                    //transform: translateX(-6%);
                 }
             }
 
@@ -834,33 +834,24 @@ $red: #FB3B64;
                 width: 100%;
 
                 &__option {
+                    margin: 10%;
+                    position: relative;
+                    transition: margin 175ms ease-out;
 
                     &--red {
-                        grid-area: 3 / 8 / span 33 / span 6;
-
-                        &:hover{
-                            grid-area: 2 / 7 / span 35 / span 8;
-                        }
+                        grid-area: 2 / 7 / span 35 / span 8;
                     }
 
                     &--blue {
-                        grid-area: 3 / 16 / span 33 / span 6;
-
-                        &:hover {
-                            grid-area: 2 / 15 / span 35 / span 8;
-                        }
+                        grid-area: 2 / 15 / span 35 / span 8;
                     }
 
                     &--green {
-                        grid-area: 3 / 24 / span 33 / span 6;
-
-                        &:hover {
-                            grid-area: 2 / 23 / span 35 / span 8;
-                        }
+                        grid-area: 2 / 23 / span 35 / span 8;
                     }
 
-                    &:hover &__button {
-                        transform: translateY(75%);
+                    &:hover {
+                        margin: 0%;
                     }
 
                     &--red:hover {
@@ -905,8 +896,11 @@ $red: #FB3B64;
                     }
 
                     &__button {
-                        width: 60%;
-                        transform: translateY(10%);
+                        position: absolute;
+                        width: 40%;
+                        top: 100%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
                     }
                 }
             }

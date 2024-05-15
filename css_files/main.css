@@ -651,6 +651,7 @@
   }
   .main__pricing {
     margin-top: 100px;
+    margin-bottom: 130px;
   }
   .main__pricing__title {
     margin-bottom: 60px;
@@ -668,26 +669,22 @@
     height: 500px;
     width: 100%;
   }
-  .main__pricing__options-container__option--red {
-    grid-area: 3/8/span 33/span 6;
+  .main__pricing__options-container__option {
+    margin: 10%;
+    position: relative;
+    transition: margin 175ms ease-out;
   }
-  .main__pricing__options-container__option--red:hover {
+  .main__pricing__options-container__option--red {
     grid-area: 2/7/span 35/span 8;
   }
   .main__pricing__options-container__option--blue {
-    grid-area: 3/16/span 33/span 6;
-  }
-  .main__pricing__options-container__option--blue:hover {
     grid-area: 2/15/span 35/span 8;
   }
   .main__pricing__options-container__option--green {
-    grid-area: 3/24/span 33/span 6;
-  }
-  .main__pricing__options-container__option--green:hover {
     grid-area: 2/23/span 35/span 8;
   }
-  .main__pricing__options-container__option:hover .main__pricing__options-container__option__button {
-    transform: translateY(75%);
+  .main__pricing__options-container__option:hover {
+    margin: 0%;
   }
   .main__pricing__options-container__option--red:hover {
     box-shadow: 5px 10px 27px 0px rgba(251, 59, 100, 0.2901960784);
@@ -722,8 +719,11 @@
     text-align: center;
   }
   .main__pricing__options-container__option__button {
-    width: 60%;
-    transform: translateY(10%);
+    position: absolute;
+    width: 40%;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
   .main__questions {
     display: flex;

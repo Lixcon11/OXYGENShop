@@ -38,12 +38,12 @@ const getPopup = () => {
             exit();
         }
     })
-    const EscapePressed = () => {
+    const escapePressed = () => {
         exit();
-        document.removeEventListener('keydown', OnEscapePressed);
+        document.removeEventListener('keydown', onEscapePressed);
     };
-    const OnEscapePressed = (event) => event.key === 'Escape' && EscapePressed();
-    document.addEventListener('keydown', OnEscapePressed);
+    const onEscapePressed = (event) => event.key === 'Escape' && escapePressed();
+    document.addEventListener('keydown', onEscapePressed);
 }
 
 export default getPopup;
