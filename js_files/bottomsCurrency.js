@@ -2,34 +2,10 @@ import getCurrencyExchange from "./currencyExchanger.js";
 
 const currencySymbols = {eur: {symbol: "€", goesLeft: false}, usd: {symbol: "$", goesLeft: true}, gbp: {symbol: "£", goesLeft: true}}
 const setText = (prices, currency) => {
-    const textArray = [];
     const symbol =currencySymbols[currency].symbol;
-    let i = 0;
-    if(currencySymbols[currency].goesLeft) {
-        for(let price in prices) {
-            textArray[i] = `${symbol}${prices[price]}`
-            i++;
-        }
-    }
-    else {
-        for(let price in prices) {
-            textArray[i] = `${prices[price]}${symbol}`
-            i++;
-        }
-    }
-    return textArray;
-};
-const currencyExchanger = async (defaultCurrency, exchanceCurrency, basePrices) => {
-    const newExchangePrices = {}
-    for(let price in basePrices) {
-        newExchangePrices[price] = 0;
-    }
-    
-    const exchange = await getCurrencyExchange(exchanceCurrency , defaultCurrency);
-    for(let price in newExchangePrices) {
-        newExchangePrices[price] = Math.round(basePrices[price] * exchange);
-    }
-    return newExchangePrices;
+    let leftSpace ="", rightSpace = "";
+    currencySymbols[currency].goesLeft ? leftSpace = symbol: rightSpace = symbol;
+    return prices.map(price => `${leftSpace}${price}${rightSpace}`);
 };
 const changeCurrency = async (contentsToChange, newCurrency, defaultValues) => {
     let newText = "";
@@ -37,21 +13,15 @@ const changeCurrency = async (contentsToChange, newCurrency, defaultValues) => {
         newText = setText(defaultValues.baseNumbers, defaultValues.currency);
     }
     else {
-        newText = setText( await currencyExchanger(defaultValues.currency, newCurrency, defaultValues.baseNumbers), newCurrency)
+        newText = setText(await Promise.all(defaultValues.baseNumbers.map(async price =>
+            Math.round(price * await getCurrencyExchange(newCurrency , defaultValues.currency)))), newCurrency)
     }
     contentsToChange.forEach((content, i) => {
         content.textContent = newText[i];
     })
 };
-const getCurrencyObjects = (array) => {
-    const newArray = [];
-    for(let i = 0; array.length > i; ++i) {
-        newArray.push({trigger: array[i][0], currency: array[i][1]})
-    }
-    return newArray;
-};
 const setCurrencyEvent = (currencyTextObjects, currencyButtons) => {
-    const objects = getCurrencyObjects(currencyButtons);
+    const objects = currencyButtons.map(button => ({trigger: button[0],currency: button[1]}))
     const defaultValues = {currency: "", baseNumbers: []}
     for(let currency in currencySymbols) {
         if(currencyTextObjects[0].textContent.includes(currencySymbols[currency].symbol)) {
@@ -59,7 +29,7 @@ const setCurrencyEvent = (currencyTextObjects, currencyButtons) => {
         }
     }
     for(let object of currencyTextObjects) {
-        defaultValues.baseNumbers.push(parseFloat(object.textContent.replace(currencySymbols[defaultValues.currency].symbol, "")))
+        defaultValues.baseNumbers.push(parseFloat(object.textContent.replace(/.*?(([0-9]*\.)?[0-9]+).*/g, "$1")))
     }
     for(let object of objects) {
         object.trigger.addEventListener("click", () => {

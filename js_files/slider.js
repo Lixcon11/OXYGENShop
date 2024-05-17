@@ -50,7 +50,11 @@ class Slider {
         let slideIndex = 1;
         const slides = element.getElementsByClassName("slider__image-container");
         const dots = element.getElementsByClassName("slider__dot-container")[0].children;
+        let timer = setTimeout(() => {
+            showSlides(slideIndex += 1);
+        }, 5000);
         const showSlides = (n) =>{
+            clearTimeout(timer);
             let i;
             if (n > slides.length) {
                 slideIndex = 1
@@ -66,6 +70,9 @@ class Slider {
             }
             slides[slideIndex-1].style.display = "block";
             dots[slideIndex-1].className += " active";
+            timer = setTimeout(() => {
+                showSlides(slideIndex += 1);
+            }, 5000);
         }
 
         element.getElementsByClassName("slider__button--prev")[0].addEventListener("click", () => {
