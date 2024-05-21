@@ -4,21 +4,22 @@ const dropdown = () => {
     const dropDown = document.querySelector(".header__navbar__dropdown");
     const widthMatch = window.matchMedia("(min-width: 1000px)")
 
+    const dropdownState = state => {
+        cross.classList[`${state}`]("block");
+        dropDown.classList[`${state}`]("block");
+        burger.classList[`${state}`]("none");
+    }
+
     burger.addEventListener("click", () => {
-        cross.style.display = "block";
-        dropDown.style.display = "block";
-        burger.style.display = "none";
+        dropdownState("add");
     });
     cross.addEventListener("click", () => {
-        cross.style.display = "none";
-        dropDown.style.display = "none";
-        burger.style.display = "inline-block";
+        dropdownState("remove");
     });
     widthMatch.addEventListener("change", (mm) => {
+        
         if (mm.matches) {
-            cross.style.display = "none";
-            dropDown.style.display = "none";
-            burger.style.display = "inline-block";
+            dropdownState("remove");
         }
     })
 }
