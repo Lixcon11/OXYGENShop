@@ -63,12 +63,14 @@ class Slider {
                 slideIndex = slides.length
             }
             for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
+                slides[i].classList.remove("block")
+                slides[i].classList.add("none")
             }
             for (i = 0; i < dots.length; i++) {
                 dots[i].className = dots[i].className.replace(" active", "");
             }
-            slides[slideIndex-1].style.display = "block";
+            slides[slideIndex-1].classList.remove("none")
+            slides[slideIndex-1].classList.add("block")
             dots[slideIndex-1].className += " active";
             timer = setTimeout(() => {
                 showSlides(slideIndex += 1);

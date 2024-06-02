@@ -112,6 +112,14 @@ body {
    to {opacity: 1}
  }
 
+ .smooth-appear {
+   animation-name: smooth-appear ;
+ }
+
+ .smooth-disappear {
+   animation-name: smooth-disappear ;
+ }
+
  @keyframes smooth-appear {
    to{
       bottom: 25px;

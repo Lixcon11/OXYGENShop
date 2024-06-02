@@ -8,10 +8,12 @@ const getUp = () => {
     });
     window.addEventListener("scroll", () => {
         if(window.scrollY){
-            upButton.style.animationName = "smooth-appear";
+            upButton.classList.remove("smooth-disappear")
+            upButton.classList.add("smooth-appear")
         }
         else {
-            upButton.style.animationName = "smooth-disappear";
+            upButton.classList.remove("smooth-appear")
+            upButton.classList.add("smooth-disappear")
         }
     })
 }

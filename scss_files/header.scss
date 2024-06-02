@@ -33,10 +33,26 @@ $blue: #08A6E4;
                 font-weight: 800;
                 font-size: 1.6rem;
                 cursor: pointer;
+
+                &--visible {
+                    display: block;
+                }
+    
+                &--not-visible {
+                    display: none;
+                }
             }
 
             &__image {
                 cursor: pointer;
+
+                &--visible {
+                    display: block;
+                }
+    
+                &--not-visible {
+                    display: none;
+                }
             }
         }
 
@@ -54,6 +70,14 @@ $blue: #08A6E4;
             padding: 30px 0px;
             z-index: 1;
             top: 60px;
+
+            &--visible {
+                display: block;
+            }
+
+            &--not-visible {
+                display: none;
+            }
 
             &__tab {
                 display: flex;

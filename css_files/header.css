@@ -28,8 +28,20 @@
   font-size: 1.6rem;
   cursor: pointer;
 }
+.header__navbar__menu__close--visible {
+  display: block;
+}
+.header__navbar__menu__close--not-visible {
+  display: none;
+}
 .header__navbar__menu__image {
   cursor: pointer;
+}
+.header__navbar__menu__image--visible {
+  display: block;
+}
+.header__navbar__menu__image--not-visible {
+  display: none;
 }
 .header__navbar__tab {
   display: none;
@@ -44,6 +56,12 @@
   padding: 30px 0px;
   z-index: 1;
   top: 60px;
+}
+.header__navbar__dropdown--visible {
+  display: block;
+}
+.header__navbar__dropdown--not-visible {
+  display: none;
 }
 .header__navbar__dropdown__tab {
   display: flex;

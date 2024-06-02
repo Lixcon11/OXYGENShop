@@ -3,11 +3,12 @@ const dropdown = () => {
     const cross = document.querySelector(".header__navbar__menu__close");
     const dropDown = document.querySelector(".header__navbar__dropdown");
     const widthMatch = window.matchMedia("(min-width: 1000px)")
+    
     const isDropdownVisible = answer => {
-        const state = answer ? "add": "remove"
-        cross.classList[`${state}`]("block");
-        dropDown.classList[`${state}`]("block");
-        burger.classList[`${state}`]("none");
+        const state = answer ? "add": "remove";
+        cross.classList[`${state}`](`header__navbar__menu__close--visible`);
+        dropDown.classList[`${state}`](`header__navbar__dropdown--visible`);
+        burger.classList[`${state}`](`header__navbar__menu__image--not-visible`);
     }
 
     burger.addEventListener("click", () => {
