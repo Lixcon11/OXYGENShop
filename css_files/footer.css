@@ -3,11 +3,13 @@
   box-shadow: 0px -5px 40px 0px rgba(0, 0, 0, 0.2);
   background-color: #F7F7F7;
 }
+.footer__container {
+  position: relative;
+}
 .footer__container__end-note {
-  display: inline-block;
-  text-align: left;
-  margin-left: 10px;
-  margin-top: 20px;
+  position: absolute;
+  left: 8%;
+  margin-top: 1.25em;
 }
 .footer__container__end-note__name {
   font-family: Raleway;
@@ -24,25 +26,16 @@
   color: #A5A5A5;
 }
 .footer__container__social {
-  display: inline-block;
-  text-align: right;
-  width: 50%;
+  position: absolute;
+  right: 8%;
+  margin-top: 2.25em;
 }
 .footer__container__social__twitter {
   display: inline-block;
+  margin-right: 15px;
 }
 .footer__container__social__facebook {
   display: inline-block;
-}
-
-@media only screen and (min-width: 1000px) {
-  .footer__container {
-    display: flex;
-    justify-content: space-between;
-  }
-  .footer__container__social {
-    transform: translate(-20px, 30px);
-  }
 }
 
 /*# sourceMappingURL=footer.css.map */

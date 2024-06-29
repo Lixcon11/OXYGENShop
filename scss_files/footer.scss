@@ -4,12 +4,11 @@
     background-color: #F7F7F7;
     
     &__container {
-
+        position: relative;
         &__end-note {
-            display: inline-block;
-            text-align: left;
-            margin-left: 10px;
-            margin-top: 20px;
+            position: absolute;
+            left: 8%;
+            margin-top: 1.25em;
 
             &__name {
                 font-family: Raleway;
@@ -29,12 +28,13 @@
         }
         
         &__social {
-            display: inline-block;
-            text-align: right;
-            width: 50%;
-    
+            position: absolute;
+            right: 8%;
+            margin-top: 2.25em;
+
             &__twitter {
                 display: inline-block;
+                margin-right: 15px;
             }
     
             &__facebook {
@@ -49,11 +49,11 @@
     .footer {
 
         &__container {
-            display: flex;
-            justify-content: space-between;
+            //display: flex;
+            //justify-content: space-between;
 
             &__social {
-                transform: translate(-20px, 30px);
+                //transform: translate(-20px, 30px);
             }
         }
     }

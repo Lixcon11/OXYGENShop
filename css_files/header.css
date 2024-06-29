@@ -3,26 +3,87 @@
   height: 70px;
   width: 100%;
   box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.2901960784);
+  position: relative;
 }
 .header__navbar__title {
   font-family: Raleway;
   font-weight: 300;
-  display: inline-block;
-  text-align: center;
   font-size: 2rem;
-  margin: 0.5em;
-  width: 17%;
+  position: absolute;
+  left: 6%;
+  margin-top: 16px;
 }
 .header__navbar__title__with-space {
   display: none;
 }
 .header__navbar__menu {
-  display: inline-block;
-  text-align: right;
-  width: 60%;
+  position: absolute;
+  right: 6%;
+  margin-top: 25px;
+}
+.header__navbar__menu__close {
+  display: none;
+  color: #08A6E4;
+  font-weight: 800;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.header__navbar__menu__close--visible {
+  display: block;
+}
+.header__navbar__menu__close--not-visible {
+  display: none;
+}
+.header__navbar__menu__image {
+  cursor: pointer;
+}
+.header__navbar__menu__image--visible {
+  display: block;
+}
+.header__navbar__menu__image--not-visible {
+  display: none;
 }
 .header__navbar__tab {
   display: none;
+}
+.header__navbar__dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  border: 1px solid white;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.2901960784);
+  padding: 30px 0px;
+  z-index: 1;
+  top: 60px;
+}
+.header__navbar__dropdown--visible {
+  display: block;
+}
+.header__navbar__dropdown--not-visible {
+  display: none;
+}
+.header__navbar__dropdown__tab {
+  display: flex;
+  align-items: center;
+  color: currentColor;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Open Sans";
+  font-weight: 700;
+  font-size: 0.68rem;
+  color: #A5A5A5;
+  line-height: 1rem;
+  letter-spacing: 0.2rem;
+  justify-self: center;
+  height: 100%;
+  padding: 0 1em;
+  text-align: center;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+.header__navbar__dropdown__tab:hover {
+  color: #000000;
 }
 
 @media only screen and (min-width: 1000px) {

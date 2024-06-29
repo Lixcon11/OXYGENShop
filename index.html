@@ -5,21 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css_files/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="module" src="./js_files/index.js" defer></script>
     <title>OXYGENShop</title>
 </head>
 <body>
+    <div class="progress-bar"></div>
     <header class="header">
         <nav class="header__navbar">
             <h1 class="header__navbar__title"><span class="header__navbar__title__without-space">OXYGENShop</span><span class="header__navbar__title__with-space">OXYGEN Shop</span></h1>
             <div class="header__navbar__menu">
-            <a href="#">
-                <img src="./svg/Menu.svg" class="header__navbar__menu__img">
+            <a>
+                <span class="header__navbar__menu__close">&times;</span>
+                <img src="./svg/Menu.svg" class="header__navbar__menu__image">
             </a>
             </div>
-            <a href="#" class="header__navbar__tab header__navbar__tab--one">why us</a>
-            <a href="#" class="header__navbar__tab header__navbar__tab--two">benefits</a>
-            <a href="#" class="header__navbar__tab header__navbar__tab--three">prices</a>
-            <a href="#" class="header__navbar__tab header__navbar__tab--four">contact</a>
+            <div class="header__navbar__dropdown">
+                <a href="#stats" class="header__navbar__dropdown__tab">why us</a>
+                <a href="#showcase" class="header__navbar__dropdown__tab">benefits</a>
+                <a href="#pricing" class="header__navbar__dropdown__tab">prices</a>
+                <a href="#questions" class="header__navbar__dropdown__tab">contact</a>
+            </div>
+            <a href="#stats" class="header__navbar__tab header__navbar__tab--one">why&nbsp;us</a>
+            <a href="#showcase" class="header__navbar__tab header__navbar__tab--two">benefits</a>
+            <a href="#pricing" class="header__navbar__tab header__navbar__tab--three">prices</a>
+            <a href="#questions" class="header__navbar__tab header__navbar__tab--four">contact</a>
         </nav>
     </header>
 
@@ -27,12 +36,12 @@
         <section class="main__advertising">
             <h2 class="main__advertising__slogan">Sell More!</h2>
             <p class="main__advertising__paragraph">Open shop on our platform and increase your sales</p>
-            <button type="button" class="main__advertising__button">Open your shop</button>
+            <a href="#pricing"><button type="button" class="main__advertising__button">Open your shop</button></a>
         </section>
         <section class="main__image_container">
-            <img class="main__image_container__background" src="./svg/Background.svg" />
+            <img class="main__image_container__background" src="./webp/Background.webp" />
         </section>
-        <section class="main__stats">
+        <section class="main__stats" id="stats">
             <h2 class="main__stats__slogan">The most popular sales platform in country</h2>
             <div class="main__stats__container">
                 <article class="main__stats__container__stat">
@@ -58,10 +67,10 @@
                 </article>
             </div>
         </section>
-        <section class="main__showcase">
+        <section class="main__showcase" id="showcase">
             <article class="main__showcase__container main__showcase__container--one">
                 <div class="main__showcase__container__background-one">
-                    <img class="main__showcase__container__background-one__image" src="./svg/Macbook2 2.svg" />
+                    <img class="main__showcase__container__background-one__image" src="./webp/Macbook.webp" />
                 </div>
                 <div class="main__showcase__container__text main__showcase__container__text--one">
                     <h2 class="main__showcase__container__text__slogan">Be always first</h2>
@@ -70,7 +79,7 @@
             </article>
             <article class="main__showcase__container main__showcase__container--two">
                 <div class="main__showcase__container__background-two">
-                    <img class="main__showcase__container__background-two__image" src="./svg/iPhone2 2.svg" />
+                    <img class="main__showcase__container__background-two__image" src="./webp/iPhone.webp" />
                 </div>
                 <div class="main__showcase__container__text main__showcase__container__text--two">
                     <h2 class="main__showcase__container__text__slogan">Your shop is where you are!</h2>
@@ -84,11 +93,16 @@
                 </div>
             </article>
             <div class="main__showcase__background-three">
-                <img class="main__showcase__background-three__image" src="./svg/Trumpet 2.svg" />
+                <img class="main__showcase__background-three__image" src="./webp/Trumpet.webp" />
             </div>
         </section>
-        <section class="main__pricing">
+        <section class="main__pricing" id="pricing">
             <h2 class="main__pricing__title">Pricing</h2>
+            <div class="main__pricing__divise-options">
+                <input class="main__pricing__divise-options__button main__pricing__divise-options__button--EUR" type="button" value="EUR">
+                <input class="main__pricing__divise-options__button main__pricing__divise-options__button--USD" type="button" value="USD">
+                <input class="main__pricing__divise-options__button main__pricing__divise-options__button--GBP" type="button" value="GBP">
+            </div>
             <div class="main__pricing__options-container">
                 <article class="main__pricing__options-container__option main__pricing__options-container__option--red">
                     <div class="main__pricing__options-container__option__features">
@@ -149,24 +163,37 @@
                 </article>
             </div>
         </section>
-        <section class="main__questions">
+        <div id="slider">
+            <img src="./jpg/keyboard.jpg"/>
+            <img src="./jpg/traffic-light.jpg" />
+            <img src="./jpg/meeting-board.jpg" />
+            <img src="./jpg/skyscraper.jpg" />
+            <img src="./jpg/whiteboard.jpg" />
+        </div>
+        <section class="main__questions" id="questions">
             <article class="main__questions__info">
                 <div class="main__questions__info__last-words">
                     <h2 class="main__questions__info__last-words__slogan">Any questions?</h2>
                     <p class="main__questions__info__last-words__paragraph">Leave your email address or call us!</p>
                 </div>
                 <div class="main__questions__info__contacts">
-                    <p class="main__questions__info__contacts__contact"><img class="main__questions__info__contacts__contact__image" src="./svg/Email.svg"/>info@bestshop.xyz</p>
-                    <p class="main__questions__info__contacts__contact"><img class="main__questions__info__contacts__contact__image" src="./svg/Phone.svg"/>123 456 789</p>
+                    <p class="main__questions__info__contacts__contact"><img class="main__questions__info__contacts__contact__image" src="./svg/Email.svg"/>luisfelipecorino2@gmail.com</p>
+                    <p class="main__questions__info__contacts__contact"><img class="main__questions__info__contacts__contact__image" src="./svg/Phone.svg"/>+351 964 593 816</p>
                 </div>
             </article>
             <article class="main__questions__invoice">
-                <label class="main__questions__invoice__label" for="name">Name</label>
-                <input class="main__questions__invoice__input" type="text" id="name">
-                <label class="main__questions__invoice__label"for="email">Email</label>
-                <input class="main__questions__invoice__input" type="text" id="email">
+                <div class="main__questions__invoice__container">
+                    <label class="main__questions__invoice__container__label" for="name">Name</label>
+                    <input class="main__questions__invoice__container__input" type="text" id="name">
+                    <span class="main__questions__invoice__container__symbol" id="nameWarning">&#9888;</span>
+                </div>
+                <div class="main__questions__invoice__container">
+                    <label class="main__questions__invoice__container__label" for="email">Email</label>
+                    <input class="main__questions__invoice__container__input" type="text" id="email">
+                    <span class="main__questions__invoice__container__symbol" id="emailWarning">&#9888;</span>
+                </div>
                 <label class="main__questions__invoice__check-container">
-                    <input type="checkbox">
+                    <input class="main__questions__invoice__check-container__checkbox" type="checkbox">
                     <span class="main__questions__invoice__check-container__checkmark"></span>
                 </label>
                 <p class="main__questions__invoice__consent-text">
@@ -177,7 +204,21 @@
                 </div>
             </article>
         </section>
-        </main>
+        <button class="main__up-button">&#8593;</button>
+        <article class="main__popup">
+            <div class="main__popup__content">
+                <span class="main__popup__content__close">&times;</span>
+                <p class="main__popup__content__text">Subscribe to our newsletter</p>
+                <div class="main__popup__content__container">
+                    <label class="main__popup__content__container__label" for="email">Email</label>
+                    <input class="main__popup__content__container__input" type="text" id="email">
+                    <span class="main__popup__content__container__symbol">&#9888;</span>
+                </div>
+                <div class="main__popup__content__button-container">
+                    <button class="main__popup__content__button-container__button" type="button">Send</button>
+                </div>
+            </div>
+        </article>
     </main>
 
     <footer class="footer">
@@ -196,5 +237,6 @@
             </div>
         </section>
     </footer>
+    <div id="root"></div>
 </body>
 </html>
